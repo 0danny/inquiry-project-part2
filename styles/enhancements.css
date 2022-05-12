@@ -1,0 +1,181 @@
+/* 
+    filename: [enhancements.css] 
+    author: [Alister Klarica] 
+    created: [1/4/2022] 
+    last modified: [7/4/2022] 
+    description: [This CSS document styles a html file called enhancements.html] 
+*/
+
+
+.title {
+    color: #83CD29;
+    font-weight: bold;
+}
+
+.title, .paragraph, .images, #ryan_dahl, .table {
+    padding: 10px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+
+#ryan_dahl {
+    max-width: 750px;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+.paragraph, figcaption, caption, .u_list, .table {
+    color: #7C97BA;
+    font-weight: initial;
+    font-size: larger;
+}
+
+figcaption {
+    font-size: medium;
+}
+
+table th {
+    font-weight: bold;
+}
+
+ul {list-style: none}
+
+li::before {
+    content: "•";
+    color: goldenrod;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#pros {
+    color: white;
+    background-color: #212643;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 12px;
+}
+
+#cons {
+    color: white;
+    background-color: #212643;
+    text-align: center;
+    font-weight: bold;
+    border-top-right-radius: 12px;
+}
+
+#pros_points {
+    border-bottom-left-radius: 12px;
+}
+
+#cons_points {
+    border-bottom-right-radius: 12px;
+}
+
+#cons_points li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+table li {
+    padding: 0.1em;
+}
+
+.table caption {
+    padding-bottom: 0.3em;
+}
+
+table.roundedCorners, th, td {
+    color: white;
+    background-color: #343b67;
+    font-weight: initial;
+    border: none;
+    padding: 0.5em;
+}
+
+#def_list {
+    color: #7C97BA;
+    font-weight: initial;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+
+
+dl {
+    border: none;
+    background-color: #343b67;
+    max-width: 59%;
+    height: auto;
+    border-radius: 12px;
+    padding: 0.5em;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+    color: #2da6db;
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    color: white;
+    margin: 0 0 0 60px;
+    padding: 0 0 0.5em 0;
+}
+
+.table ul {
+    margin-left: 1.5rem
+}
+
+.u_list li {
+    margin-left: 3rem;
+    padding: 0.2rem;
+}
+
+a:link {
+    color: #7A97BA;
+}
+
+a:visited {
+    color: #7A97BA;
+}
+
+a:hover {
+    color: #1F487E;
+}
+
+a:active {
+    color: #343b67;
+}
+
+footer strong {
+    font-size:large;
+}

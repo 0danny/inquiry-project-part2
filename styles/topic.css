@@ -1,0 +1,298 @@
+/* 
+    filename: [topic.css] 
+    author: [Adam Horvath] 
+    created: [1/4/2022] 
+    last modified: [7/4/2022] 
+    description: [This CSS document styles a html file called topic.html] 
+*/
+
+/* <h1> shorthand font property  */
+h1.header_title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sub_head {
+    display: flex;
+    flex: 2;
+    font-size: 1em;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+}
+
+#sub_head a {
+    border-bottom: 1px solid #7A97BA;
+    border-top: 1px solid hsl(213, 32%, 60%);
+    color: #7A97BA;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+
+#sub_head a:hover {
+    color: #1F487E;
+}
+
+#special {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    color: #83CD29;
+    font-weight: 600;
+    width: 59%;
+}
+
+.title,
+.paragraph p,
+.images,
+#ryan_dahl,
+.table,
+.o_list {
+    padding: 10px;
+    text-align: left;
+    margin: auto;
+}
+
+.paragraph p {
+    border: none;
+    width: 59%;
+}
+
+section.paragraph {
+    width: 100%;
+    margin: auto;
+}
+
+/* Aside viewport width set to 30%, floats to right, colored border */
+aside {
+    width: 30%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #8adbf7;
+    font-style: italic;
+    color: #6baabe;
+    border: solid;
+    border-right: none;
+    border-color: #6baabe;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+aside>p {
+    margin: .5rem;
+}
+
+#ryan_dahl {
+    max-width: 59%;
+    height: auto;
+    color: #7C97BA;
+}
+
+/* constraints img selector max width to 100% */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* sets selector (class paragraph p, id o_list, class table) (font) color, font weight, and font size  */
+.paragraph p,
+.o_list,
+.table {
+    color: #7C97BA;
+    font-weight: initial;
+    font-size: larger;
+}
+
+/* sets images class slector width to 59% */
+.images {
+    width: 59%;
+}
+
+figure.images {
+    font-size: medium;
+    color: #7C97BA;
+    font-weight: initial
+}
+
+table th {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none
+}
+
+li::before {
+    content: "•";
+    color: goldenrod;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* sets Pros heading background color */
+
+.pros {
+    color: white;
+    background-color: #212643;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 12px;
+}
+
+/* sets Cons heading background color */
+
+.cons {
+    color: white;
+    background-color: #212643;
+    text-align: center;
+    font-weight: bold;
+    border-top-right-radius: 12px;
+}
+
+.pros_points {
+    border-bottom-left-radius: 12px;
+}
+
+.cons_points {
+    border-bottom-right-radius: 12px;
+}
+
+.cons_points li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+table li {
+    padding: 0.2em;
+}
+
+.table {
+    width: 59%;
+    table-layout: auto;
+}
+
+/* removes cell spacing/padding between table contents */
+.table table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table caption {
+    padding-bottom: 0.3em;
+}
+
+/* sets table data background color */
+
+table.roundedCorners,
+th,
+td {
+    color: white;
+    background-color: #343b67;
+    font-weight: initial;
+    border: none;
+    padding: 0.5em;
+}
+
+#def_list {
+    font-weight: initial;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    width: 59%;
+    margin: auto;
+}
+
+dl {
+    border: none;
+    background-color: #343b67;
+    border-radius: 12px;
+    padding: 0.5em;
+}
+
+dt {
+    float: left;
+    clear: left;
+    text-align: right;
+    width: 120px;
+    color: #2da6db;
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    color: white;
+    margin: 0 0 0 130px;
+    padding: 0 0 0.5em 0;
+}
+
+.table ul {
+    margin-left: 1.5rem
+}
+
+.o_list {
+    width: 59%;
+}
+
+ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.o_list li::before {
+    content: counter(li);
+    color: goldenrod;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}
+
+li {
+    counter-increment: li
+}
+
+.o_list li {
+    margin-left: 3rem;
+    padding: 0.2rem;
+}
+
+footer strong {
+    font-size: large;
+}
+
+a:link {
+    color: #7A97BA;
+}
+
+a:visited {
+    color: #7A97BA;
+}
+
+a:hover {
+    color: #1F487E;
+}
+
+a:active {
+    color: #343b67;
+}
+
+.o_list p {
+    width: 100%;
+    font-size: large;
+    margin-left: -5px;
+}

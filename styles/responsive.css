@@ -1,0 +1,27 @@
+/* resposnive .css */
+
+
+/* media query for display over 500 */
+
+@media screen and (max-width: 1350px) {
+    #sub_head {
+        flex-direction: column !important;
+    }
+}
+
+@media only screen and (max-width: 1095px) and (min-width: 690px) {
+    .top_navigation {
+        flex: none !important;
+    }
+    .top_navigation a {
+        padding: 10px !important;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .top_navigation {
+        flex: none !important;
+        flex-direction: column !important;
+    }
+}

@@ -1,0 +1,109 @@
+* {
+    /* Footer full page width */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* size family set */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { /*sets background colour for whole body*/
+        background-color: #1A2431;
+}
+
+header {
+    text-align: center;    /*Aligns the text to the center to make it look presentable*/ 
+    display: flex;    /*expands item to fill up avaliable free space*/
+    flex-direction: row;  /*defines the main axis and direction of an item*/
+    align-items: center;   
+    background-color: #253447;  /*sets the background colour of the header*/
+    padding: 20px;
+    border-bottom: 3px solid #83CD29;
+}
+
+.header_title {
+    color: #83CD29;    /*gives the header a colour*/
+}
+
+.header_logo {
+    width: 70px;
+    height: 70px;   /*defines the height of the logo*/ 
+}
+
+.header_title_wrapper {      /*Ensures the title is in the center of a webpage*/
+    display: flex;           /* determines the type of box generated for an element*/
+    flex-direction: row;     /*sets direction for the flex container main axis*/
+    align-items: center;    /*aligns the items along the current line of  the flex container*/
+    flex: 1;
+}
+
+.top_navigation {
+    flex: 2;
+    display: flex;
+    flex-direction: row;         /*sets the direction of the flex container's main axis*/
+    justify-content: center;    /*puts the content in the center*/
+}
+
+.link_wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;     /*adjustd the item towards the end line*/
+}
+
+.top_navigation a {
+    text-decoration: none;
+    color: #7A97BA;          /*used to set the colour of element's text*/
+    margin-left: 10px;         /*defines the thickness of the margin*/
+    font-weight: bold;         /*defines the thikness of a font*/
+    transition: 0.2s all;
+    font-size: 1.3em;
+    padding: 20px;
+    border-bottom: 1px solid #7A97BA;
+    border-top: 1px solid hsl(213, 32%, 60%);
+}
+
+.top_navigation a:hover {
+    color: #1F487E;       /*sets a colour of an element's text*/
+}
+
+footer {
+    margin-top: auto;
+    background-color: #253447;  /*Used to set the backgorund colour of an element*/
+    padding: 30px;               /*defines the thickness of the padding area*/
+}
+
+footer p {
+    color: white;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+
+footer p a:hover {
+    color: #1F487E;        /*used to set a colour of an element's text*/
+}
+
+span {
+    color: #7A97BA;
+    font-size: 1.3em;     /*used to adjust the font size of a text*/
+}
+
+.github_logo {   /*Shows an imagine of the github logo*/
+    height: auto;
+    width: 3em;
+    transition: 0.2s all;
+    border-radius: 3em;
+    cursor: pointer;
+}
+
+.github_logo:hover {
+    background-color: #83CD29;
+}
+
+.completed_by {
+    text-align: center; /*aligns the text o the center*/
+    font-style: italic; /*gives the font an italic style*/
+}

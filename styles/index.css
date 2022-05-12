@@ -1,0 +1,139 @@
+/* 
+    filename: [index.css] 
+    author: [Sam Green] 
+    created: [1/4/2022] 
+    last modified: [7/4/2022] 
+    description: [This CSS document styles a html file called index.html] 
+*/
+
+body {
+    color: white; /*turns body text white*/
+}
+footer {
+    clear: both; /*ensures that different aspects such as table didnt get alligned next to the footer*/
+}
+.subheader {
+    color: #83CD29;
+    margin-bottom: 1em; /*gives respective space around subheader*/
+    margin-top: 1em;
+}
+
+.horizontal{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-width: 1em; /*Gives borders thickness and seperates title from body*/
+}
+
+.table_image {
+    margin: 10px;
+    height: auto;
+    width: 5em;
+    border: 1px solid #83CD29;
+}
+
+.index_page {
+    margin: 10px; /*takes every aspect off the edge*/
+}
+
+#table{
+    float: left;
+    clear: left; /*Alligns the table to the left and places below body text*/
+    
+}
+
+#link_index{
+    border: 10px solid gray; /*places borders around text*/
+    border-radius: 2em;
+    float: right;
+    margin-right: 1em;
+    padding: 1em; /*places speace between text and border*/
+    width: 40%;
+    margin-bottom: 1em;
+}
+#link_index a { /*Sets the text styles for the links*/
+    text-decoration: none;
+    background-color: #7A97BA;
+    text-align: center;
+    color: rgb(80, 79, 79);
+    font-weight: bold;
+    float: left;
+    font-size: 1.3em;
+    border: 1px solid white;
+    width: 90%;
+    border-radius:3em;
+    margin-left:5%;
+    margin: 0.5em; /*specifically moves text to where it looks the best through trial and error*/
+    padding:0.5em;
+    clear:none;
+    
+}
+
+#link_index a:hover {
+    color: #1F487E; /*when hpovering it turns alternate colour*/
+}
+#link_index h3 { /*sets title for navigation links*/
+    color: #83CD29;
+    margin-bottom: 1em;
+}
+
+#intro_para{ /*styles all parargraph elements in the brief description*/
+    width: 40%;
+    float: left;
+    border: 1px solid white;
+    border-radius: 1em;
+    padding:1em;
+}
+
+#about{ /*brief description*/
+    margin: 3em;
+    clear: left;
+    float:left;
+}
+
+.header_title_index { /*styles big node.js title*/
+    color: #83CD29;
+    text-align: center;
+    font-size: 2em;
+}
+th{ /*incorporates the table  with different text types and coloured fonts*/
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    color: rgb(159, 175, 159);
+}
+
+.table_explain { /*creates the description of the images*/
+    margin-left: 1em;
+    text-align: left;
+    font-style: italic;
+}
+
+#youtube_link { /*takes away default styling of a link eg. underline and places the youtube like hidden behind normal text*/
+    width: 40%;
+    float: right;
+    border: 1px solid lightcoral;
+    border-radius: 1em;
+    margin: 1em;
+    clear: right;
+    padding: 0.25em;
+}
+
+#youtube_link a {
+    color: white;
+    text-decoration: none; /*no underline*/
+}
+
+#youtube_link p {
+    text-align: center; /*centers the text in the box*/
+}
+
+#youtube_link a:hover {
+    color: #1F487E; /*ensures a hover colour*/
+}
+
+#youtube_link h3 {
+    color: #83CD29;
+    margin: 0.25em;
+    margin-left: 0.5em; /*styles the heading of the help section*/
+    
+}
