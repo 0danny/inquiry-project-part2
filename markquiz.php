@@ -26,16 +26,13 @@ function sanitise_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
 //ANSWERS
-if (isset ($_POST["A1"])) {
-    $A1 = $_POST["A1"];
-}
-if (isset ($_POST["A2"])) {
-    $A2 = $_POST["A2"];
-}
-if (isset ($_POST["A3"])) {
-    $A3 = $_POST["A3"];
-}
+$A1 = $_POST["JavaScript"];
+$A2 = $_POST["All of the above"];
+$A3 = $_POST[""];
+$A4 = $_POST[""];
+$A5 = $_POST["13"];
 
 //Checks if process was triggered by a form submit, if not display an error message
 if (isset ($_POST["student_number"])) {
@@ -64,14 +61,14 @@ if (isset ($_POST["question_framework"])) {
 
 if (isset ($_POST["question_language"])) {
     $question_language = $_POST["question_language"];
-    if $A1 == $question_framework{
+    if $A2 == $question_language{
         $score = $score+1
     }
 }
 
 if (isset ($_POST["question_suitable"])) {
     $question_suitable = $_POST["question_suitable"];
-    if $A1 == $question_framework{
+    if $A3 == $question_suitable{
         $score = $score+1
     }
 }
