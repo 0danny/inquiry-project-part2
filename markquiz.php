@@ -49,20 +49,8 @@ if (isset ($_POST["question_suitable"])) {
 }
     
 else {
-    $species = "Unknown species";
+    
 }
-
-$tour = array();
-if (isset ($_POST["1day"])) {
-    array_push($tour, "One-day") ;
-}
-if (isset ($_POST["4day"])) {
-    array_push($tour, "Four-day") ;
-}
-if (isset ($_POST["10day"])) {
-    array_push($tour, "Ten-day") ;
-}
-
 
 $studentId = sanitise_input($studentId);
 $firstName = sanitise_input($firstname);
