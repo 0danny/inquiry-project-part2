@@ -19,33 +19,33 @@ function sanitise_input($data) {
 }
 
 //Checks if process was triggered by a form submit, if not display an error message
-if (isset ($_POST["firstName"])) {
-    $firstname = $_POST["firstName"];
+if (isset ($_POST["studentId"])) {
+    $studentId = $_POST["studentId"];
 }
 
 else {
     //Redirect to form, if process not triggered by a form submit
-    header ("location: register.html");
+    header ("location: quiz.html");
 }
 //assign the rest of the form values to PHP variables here...
-if (isset ($_POST["lastname"])) {
-    $lastname = $_POST["lastname"];
+if (isset ($_POST["firstName"])) {
+    $firstName = $_POST["firstName"];
 }
 
-if (isset ($_POST["age"])) {
-    $age = $_POST["age"];
+if (isset ($_POST["lastName"])) {
+    $lastName = $_POST["lastName"];
 } 
 
-if (isset ($_POST["food"])) {
-    $food = $_POST["food"];
+if (isset ($_POST["question_framework"])) {
+    $question_framework = $_POST["question_framework"];
 }
 
-if (isset ($_POST["partySize"])) {
-    $partySize = $_POST["partySize"];
+if (isset ($_POST["question_language"])) {
+    $question_language = $_POST["question_language"];
 }
 
-if (isset ($_POST["species"])) {
-    $species = $_POST["species"];
+if (isset ($_POST["question_suitable"])) {
+    $question_suitable = $_POST["question_suitable"];
 }
     
 else {
@@ -64,12 +64,12 @@ if (isset ($_POST["10day"])) {
 }
 
 
-$firstname = sanitise_input($firstname);
+$studentId = sanitise_input($studentId);
+$firstName = sanitise_input($firstname);
 $lastname = sanitise_input($lastname);
-$species = sanitise_input($species);
-$age = sanitise_input($age);
-$food = sanitise_input($food);
-$partySize = sanitise_input($partySize);
+$question_framework = sanitise_input($question_framework);
+$question_language = sanitise_input($question_language);
+$question_suitable = sanitise_input($question_suitable);
 
 $errMsg = "";
 
