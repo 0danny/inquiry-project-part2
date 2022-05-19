@@ -17,13 +17,15 @@
         $sql_db
     );
 
-    $make = trim($_POST["carmake"]);
-    $model = trim($_POST["carmodel"]);
-    $price = trim($_POST["price"]);
-    $yom = trim($_POST["yom"]);
+    $student_number = trim($_POST["student_number"]);
+    $first_name = trim($_POST["first_name"]);
+    $last_name = trim($_POST["last_name"]);
+    $number_of_attempts = trim($_POST["number_of_attempts"]);
+    $score = trim($_POST["score"]);
 
-    $query = "insert into $sql_table (make, model, price, yom) values ('$make', '$model', '$price',
-    '$yom')";
+    $query = "insert into $sql_table (first_name, last_name, student_number, number_of_attempts, score) 
+    values ('$first_name', '$last_name', '$student_number', '$number_of_attempts', '$score')";
+
     // execute the query - we should really check to see if the database exists first.
         $result = mysqli_query($conn, $query);
         // checks if the execution was successful
@@ -31,7 +33,7 @@
             echo "<p class=\"wrong\">Something is wrong with ", $query, "</p>";
         } else {
             // display an operation successful message
-            echo "<p class=\"ok\">Successfully added New Car record<p>";
+            echo "<p class=\"ok\">Successfully added New Attempt<p>";
         } // if successful query operation
 
         // close the database connection
