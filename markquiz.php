@@ -79,6 +79,9 @@ if ($lastname=="") {
 else if (!preg_match("/^[a-zA-Z]*$/",$lastname)) {
     $errMsg .= "<p>Only alpha letters allowed in your last name.</p>";
 }
+if ($question_framework=="") {
+    $errMsg .= "<p>You must enter a programming language.</p>";
+}
 else {
     $tours = "";
     $last=array_pop($tour);
