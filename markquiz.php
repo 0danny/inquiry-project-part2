@@ -49,7 +49,7 @@ if (isset ($_POST["question_suitable"])) {
 }
     
 else {
-    
+
 }
 
 $studentId = sanitise_input($studentId);
@@ -61,6 +61,12 @@ $question_suitable = sanitise_input($question_suitable);
 
 $errMsg = "";
 
+if (is_numeric($studentId)== false) {
+    $errMsg .= "<p>Your ID must be a number.</p>";
+}
+else if ($studentId (1000000 > $studentId) or ((9999999 < $studentId) and ($studentId < 1000000000)) or ($studentId > 9999999999)) {
+    $errMsg .= "<p>Has to be 7 or 10 characters.</p>";
+}
 if ($firstname=="") {
     $errMsg .= "<p>You must enter your first name.</p>";
 }
@@ -72,15 +78,6 @@ if ($lastname=="") {
 }
 else if (!preg_match("/^[a-zA-Z]*$/",$lastname)) {
     $errMsg .= "<p>Only alpha letters allowed in your last name.</p>";
-}
-if (is_numeric($age) == false) {
-    $errMsg .= "<p>Your age must be a number.</p>";
-}
-else if (!preg_match("/^[1][0]|[1-9][1-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|10000*$/",$age)) {
-    $errMsg .= "<p>Your age must be between 10 and 10,000.</p>";
-}
-if ($errMsg != "") {
-    echo "<p>$errMsg</p>";
 }
 else {
     $tours = "";
