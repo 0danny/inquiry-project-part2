@@ -21,28 +21,9 @@
 
 <body>
 
-    <header>
-        <!-- Header HTML -->
-        <div class="header_title_wrapper">
-            <a href="index.html">
-                <img src="images/node_logo.webp" class="header_logo" alt="NodeJS Logo">
-            </a>
-            <h1 class="header_title">Node.JS</h1>
-        </div>
-
-        <nav class="top_navigation">
-            <a href="index.html">Home</a>
-            <a href="topic.html">Topic</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="enhancements.html">Enchancements</a>
-        </nav>
-
-        <div class="link_wrapper">
-            <a href="https://github.com/DannyOCE/inquiry-project">
-                <img src="images/github_logo.png" class="github_logo" alt="Github Logo">
-            </a>
-        </div>
-    </header>
+    <?php
+	    include_once "header.inc";
+    ?>
 
     <!-- Form element to post form values to mercury server. -->
     <form method="post" action="markquiz.php" class="quiz_form">
@@ -195,16 +176,9 @@
     </form>
 
     <!-- Footer HTML -->
-    <footer>
-
-        <!-- Completed by HTML, with mailto hoverable links to each person within the group. -->
-        <p class="completed_by">
-            Project completed by:
-            <br><br>
-            <strong><a href=mailto:103968787@student.swin.edu.au>Adam</a>, <a href=mailto:103986527@student.swin.edu.au>Daniel</a>, <a href=mailto:104004035@student.swin.edu.au>Alister</a>, <a href=mailto:103988235@student.swin.edu.au>Sam G</a>, <a href=mailto:103999745@student.swin.edu.au>Sam S</a></strong>
-        </p>
-
-    </footer>
+    <?php
+	    include_once "main_footer.inc";
+    ?>
 
 </body>
 </html>

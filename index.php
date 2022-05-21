@@ -17,27 +17,10 @@
 
 <body>
 
-    <header>
-        <div class="header_title_wrapper">
-            <a href="index.html">
-                <img src="images/node_logo.webp" class="header_logo" alt="node logo">
-            </a>
-            <h1 class="header_title">Node.JS</h1>
-        </div>
+    <?php
+	    include_once "header.inc";
+    ?>
 
-        <nav class="top_navigation">
-            <a href="index.html">Home</a>
-            <a href="topic.html">Topic</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="enhancements.html">Enchancements</a>
-        </nav>
-
-        <div class="link_wrapper">
-            <a href="https://github.com/DannyOCE/inquiry-project">
-                <img src="images/github_logo.png" class="github_logo" alt="github logo">
-            </a>
-        </div>
-    </header>
     <article class="index_page">
         <h2 class="header_title_index">WELCOME TO NODE.JS</h2>
         <hr class="horizontal">
@@ -112,15 +95,9 @@
     </article>
 
 
-    <footer>
-
-        <p class="completed_by">
-            Project completed by:
-            <br><br>
-            <strong><a href=mailto:103968787@student.swin.edu.au>Adam</a>, <a href=mailto:103986527@student.swin.edu.au>Daniel</a>, <a href=mailto:104004035@student.swin.edu.au>Alister</a>, <a href=mailto:103988235@student.swin.edu.au>Sam G</a>, <a href=mailto:103999745@student.swin.edu.au>Sam S</a></strong>
-        </p>
-
-    </footer>
+    <?php
+	    include_once "main_footer.inc";
+    ?>
 
 </body>
 
