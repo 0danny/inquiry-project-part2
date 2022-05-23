@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta name="description" content="Creating Web Applications Lab 10" />
 <meta name="keywords" content="PHP, Mysql" />
-<title>Retrieving records to HTML</title>
+<title>Quiz supervisor queries</title>
 </head>
 <body>
-<h1>Creating Web Applications - Lab10</h1>
+<h1>Attempts table</h1>
 <?php
     require_once ("settings.php"); //connection info
 
@@ -27,7 +27,7 @@
         $sql_table="attempts";
     
         // Set up the SQL command to query or add data into the table
-        $query = "select attempt_id, date_time, first_name, last_name, student_number, number_of_attempts, score FROM attempts ORDER BY date_time, student_attempts";
+        $query = "select attempt_id, date_time, first_name, last_name, student_number, number_of_attempts, score FROM attempts ORDER BY date_time, number_of_attempts";
     
         // execute the query and store result into the result pointer
         $result = mysqli_query ($conn, $query);
@@ -58,7 +58,7 @@
             echo "<td>", $row["first_name"], "</td>\n";
             echo "<td>", $row["last_name"], "</td>\n";
             echo "<td>", $row["student_number"], "</td>\n";
-            echo "<td>", $row["number_of_attemps"], "</td>\n";
+            echo "<td>", $row["number_of_attempts"], "</td>\n";
             echo "<td>", $row["score"], "</td>\n";
             
             echo "</tr>\n";

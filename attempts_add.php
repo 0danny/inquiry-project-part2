@@ -33,15 +33,16 @@ use LDAP\Result;
         echo "Already greater than 2. <br> You cannot submit.";
     }
     else{
-        $number_of_attempts = $number_of_attempts + 1;
+        $number_of_attempts = $number_of_attempts + 1; // we need to re-define $number_of_attempts cause it is causing a lot of problems
         $student_number = trim($_POST["student_number"]);
         $first_name = trim($_POST["first_name"]);
         $last_name = trim($_POST["last_name"]);
-        $number_of_attempts = trim($_POST["number_of_attempts"]);
-        $score = trim($_POST["score"]);
-
-        $query = "insert into $sql_table (first_name, last_name, student_number, number_of_attempts, score) 
-        values ('$first_name', '$last_name', '$student_number', '$number_of_attempts', '$score')";
+        $number_of_attempts = trim($_POST["number_of_attempts"]);// same here $number_of_attempts are scuffed
+        $score = trim($_POST["score"]); // score not defined? 
+        $date_time = (date("Y/m/d") . date("h:i:sa")); // gets current time and posts it
+        
+        $query = "insert into $sql_table (date_time, first_name, last_name, student_number, number_of_attempts, score) 
+        values ('$date_time', '$first_name', '$last_name', '$student_number', '$number_of_attempts', '$score')";
 
         // execute the query - we should really check to see if the database exists first.
             $result = mysqli_query($conn, $query);
@@ -51,10 +52,11 @@ use LDAP\Result;
             } else {
                 // display an operation successful message
                 echo "<p class=\"ok\">Successfully added New Attempt<p>";
+                require_once('markquiz.php');
             } // if successful query operation
         }
 
         // close the database connection
-        mysqli_close($conn);
+        @mysqli_close($conn);
         // if successful database connection
 ?>

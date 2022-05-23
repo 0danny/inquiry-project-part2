@@ -28,11 +28,11 @@ function sanitise_input($data) {
 }
 
 //ANSWERS
-$A1 = $_POST["JavaScript"];
-$A2 = $_POST["All of the above"];
-$A3 = $_POST[""];
-$A4 = $_POST[""];
-$A5 = $_POST["13"];
+$A1 = "JavaScript";
+$A2 = "All of the above";
+$A3 = "";
+$A4 = "";
+$A5 = "13";
 
 //Checks if process was triggered by a form submit, if not display an error message
 if (isset ($_POST["student_number"])) {
@@ -57,7 +57,11 @@ if (isset ($_POST["question_framework"])) {
     if ($A1 == $question_framework){
         $score = $score+1;
     }
-}
+    elseif ($A1 != $question_framework){
+        echo 'wrong';
+    }
+    }
+        
 
 if (isset ($_POST["question_language"])) {
     $question_language = $_POST["question_language"];
@@ -83,15 +87,26 @@ $last_name = sanitise_input($last_name);
 $question_framework = sanitise_input($question_framework);
 $question_language = sanitise_input($question_language);
 $question_suitable = sanitise_input($question_suitable);
+$score = sanitise_input($score);
 
 $errMsg = "";
 
 if (is_numeric($student_number)== false) {
     $errMsg .= "<p>Your ID must be a number.</p>";
 }
-else if ($student_number (1000000 > $student_number) or ((9999999 < $studentId) and ($studentId < 1000000000)) or ($studentId > 9999999999)) {
+else if ((1000000 > $student_number)){
     $errMsg .= "<p>Has to be 7 or 10 characters.</p>";
 }
+else if ((9999999 < $student_number) && ($student_number < 1000000000)){
+    $errMsg .= "<p>Has to be 7 or 10 characters.</p>";
+}
+else if (($student_number > 9999999999)) {
+    $errMsg .= "<p>Has to be 7 or 10 characters.</p>";
+}
+
+
+
+
 if ($first_name=="") {
     $errMsg .= "<p>You must enter your first name.</p>";
 }

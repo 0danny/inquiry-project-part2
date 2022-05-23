@@ -37,16 +37,16 @@
             <h3>Navigation of Node Page</h3>
             <p>Navigation between pages can be found up the top of our website, or through the home page (where you are now)</p>
             <br>
-            <a href="index.html">Home Page (You are here)</a>
+            <a href="index.php">Home Page (You are here)</a>
             <br>
             <br>
-            <a href="topic.html">Topic Page</a>
+            <a href="topic.php">Topic Page</a>
             <br>
             <br>
-            <a href="quiz.html">Quiz Page</a>
+            <a href="quiz.php">Quiz Page</a>
             <br>
             <br>
-            <a href="enhancements.html">Enchancements Page</a>
+            <a href="enhancements.php">Enchancements Page</a>
         </section>
         <section id="table">
             <h3 class="subheader">Where is Node.JS Used</h3>

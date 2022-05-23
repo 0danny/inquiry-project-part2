@@ -1,16 +1,16 @@
 <header>
         <div class="header_title_wrapper">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="images/node_logo.webp" class="header_logo" alt="node logo">
             </a>
             <h1 class="header_title">Node.JS</h1>
         </div>
 
         <nav class="top_navigation">
-            <a href="index.html">Home</a>
-            <a href="topic.html">Topic</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="enhancements.html">Enchancements</a>
+            <a href="index.php">Home</a>
+            <a href="topic.php">Topic</a>
+            <a href="quiz.php">Quiz</a>
+            <a href="enhancements.php">Enchancements</a>
         </nav>
 
         <div class="link_wrapper">
