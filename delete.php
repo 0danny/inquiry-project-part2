@@ -13,10 +13,14 @@ if (!isset($_POST["student_number"])) {
 }
 $student_number=$_POST["student_number"];
 require_once "settings.php";
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+$conn = @mysqli_connect($host,
+$user,
+$pwd,
+$sql_db
+);
 if ($conn) {
     echo "<p>Connection unsuccessful!<p>";
-    $query = "DELETE FROM attempts WHERE userid=$student_number";
+    $query = "DELETE FROM attempts WHERE student_number=$student_number";
     $result = mysqli_query($conn, $query);
     echo $query;
     if ($result) {
