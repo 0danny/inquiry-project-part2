@@ -52,7 +52,7 @@ use LDAP\Result;
             } else {
                 // display an operation successful message
                 echo "<p class=\"ok\">Successfully added New Attempt<p>";
-                require_once('markquiz.php');
+                require_once('manage.php');
             } // if successful query operation
         }
 

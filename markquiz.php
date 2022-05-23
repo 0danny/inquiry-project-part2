@@ -128,7 +128,7 @@ if ($errMsg !=""){
 }
 
 else {
-    include_once ("manage.php");
+    include_once ("attempts_add.php");
 }
 ?>
 </body>

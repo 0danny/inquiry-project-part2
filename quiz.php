@@ -26,7 +26,7 @@
     ?>
 
     <!-- Form element to post form values to mercury server. -->
-    <form method="post" action="attempts_add.php" class="quiz_form">
+    <form method="post" action="markquiz.php" class="quiz_form">
 
         <!-- Fieldset outline number 1 -->
         <fieldset>
