@@ -54,22 +54,22 @@ if (isset ($_POST["last_name"])) {
 
 if (isset ($_POST["question_framework"])) {
     $question_framework = $_POST["question_framework"];
-    if $A1 == $question_framework{
-        $score = $score+1
+    if ($A1 == $question_framework){
+        $score = $score+1;
     }
 }
 
 if (isset ($_POST["question_language"])) {
     $question_language = $_POST["question_language"];
-    if $A2 == $question_language{
-        $score = $score+1
+    if ($A2 == $question_language){
+        $score = $score+1;
     }
 }
 
 if (isset ($_POST["question_suitable"])) {
     $question_suitable = $_POST["question_suitable"];
-    if $A3 == $question_suitable{
-        $score = $score+1
+    if ($A3 == $question_suitable){
+        $score = $score+1;
     }
 }
     
@@ -113,63 +113,8 @@ if ($errMsg !=""){
 }
 
 else {
-    if (!$conn) {
-        // Displays an error message
-        echo "(<p>Database connection failure</p>"; // not in production script
-        } else {
-        // Upon successful connection
-    
-        $sql_table="attempts";
-    
-        // Set up the SQL command to query or add data into the table
-        $query = "select attempt_id, date_time, first_name, last_name, student_number, number_of_attempts, score FROM attempts ORDER BY date_time, student_attempts";
-    
-        // execute the query and store result into the result pointer
-        $result = mysqli_query ($conn, $query);
-    
-        // checks if the execution was successful
-        if (!$result) {
-        echo "<p>Something is wrong with ", $query, "</p>";
-        } else {
-        // Display the retrieved records
-        echo "<table border=\"1\">\n";
-        echo "<tr>\n "
-        ."<th scope=\"col\">attempt_id</th>\n "
-        ."<th scope=\"col\">date_time</th>\n "
-        ."<th scope=\"col\">first_name</th>\n "
-        ."<th scope=\"col\">last_name</th>\n "
-        ."<th scope=\"col\">student_number</th>\n "
-        ."<th scope=\"col\">number_of_attemps</th>\n "
-        ."<th scope=\"col\">score</th>\n "
-
-        ."<tr>\n ";
-    
-        // retrieve current record pointed by the result pointer
-    
-        while ($row = mysqli_fetch_assoc ($result)) {
-            echo "<tr>\n";
-            echo "<td>", $row["attempt_id"], "</td>\n";
-            echo "<td>", $row["date_time"], "</td>\n";
-            echo "<td>", $row["first_name"], "</td>\n";
-            echo "<td>", $row["last_name"], "</td>\n";
-            echo "<td>", $row["student_number"], "</td>\n";
-            echo "<td>", $row["number_of_attemps"], "</td>\n";
-            echo "<td>", $row["score"], "</td>\n";
-            
-            echo "</tr>\n";
-            }
-    
-            echo "</table>\n ";
-            // Frees up the memory, after using the result pointer
-            mysqli_free_result($result);
-            }   // if successful query operation
-    
-            // close the database connection
-            mysqli_close($conn);
-        }   // if successful database connection
+    include_once ("manage.php");
 }
-
 ?>
-
 </body>
 </html>
