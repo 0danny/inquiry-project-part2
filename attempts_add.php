@@ -24,7 +24,7 @@ use LDAP\Result;
 
     $sql_table ="attempts";
 
-    $query = "select student_number FROM attempts"; 
+    $query = "select student_number, number_of_attempts FROM attempts"; 
 
     $result = mysqli_query($conn, $query);
     if (!$result){
@@ -38,6 +38,7 @@ use LDAP\Result;
         $first_name = trim($_POST["first_name"]);
         $last_name = trim($_POST["last_name"]);
         $date_time = (date("Y/m/d") . ' ' . date("h:i:sa")); // gets current time and posts it
+        $score = ($score/5)*100 . '%';
         
         $query = "insert into $sql_table (date_time, first_name, last_name, student_number, number_of_attempts, score) 
         values ('$date_time', '$first_name', '$last_name', '$student_number', '$number_of_attempts', '$score')";
