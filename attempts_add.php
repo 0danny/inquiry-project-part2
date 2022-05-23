@@ -26,12 +26,12 @@ use LDAP\Result;
 
     $query = "select student_number FROM attempts"; 
 
-    $result = $result = mysqli_query($conn, $query);
-    if $result >= 2{
-
+    $result = mysqli_query($conn, $query);
+    if (!$result){
+        echo('no student');}
+    elseif ($result >= 2){
+        echo "Already greater than 2. <br> You cannot submit.";
     }
-
-
     else{
         $number_of_attempts = $number_of_attempts + 1;
         $student_number = trim($_POST["student_number"]);
