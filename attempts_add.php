@@ -20,6 +20,12 @@ use LDAP\Result;
         $sql_db
     );
 
+    // disallows attempt if score is equal to 0
+    if ($score == 0 ) {
+        echo "Your score is 0. Please modify your answer.";
+        exit();
+    }
+
     #$query = //selecting student number if it exists and returning number of attempts
     $student_number = trim($_POST["student_number"]);
     $sql_table ="attempts";
@@ -60,3 +66,10 @@ use LDAP\Result;
         @mysqli_close($conn);
         // if successful database connection
 ?>
+</body>
+<h2>Delete</h2>
+<form method="post" action="delete.php">
+    <p>Enter student number: <input type="text" name="student_number"></p>
+    <p><input type="submit"></p>
+</form>
+</html>
