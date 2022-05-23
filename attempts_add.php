@@ -19,8 +19,7 @@ use LDAP\Result;
         $pwd,
         $sql_db
     );
-
-    $query = //selecting student number if it exists and returning number of attempts
+    #$query = //selecting student number if it exists and returning number of attempts
 
     $sql_table ="attempts";
 

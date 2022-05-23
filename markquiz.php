@@ -41,8 +41,9 @@ if (isset ($_POST["student_number"])) {
 
 else {
     //Redirect to form, if process not triggered by a form submit
-    header ("location: quiz.html");
+    header ("location: quiz.php");
 }
+
 //assign the rest of the form values to PHP variables here...
 if (isset ($_POST["first_name"])) {
     $first_name = $_POST["first_name"];
@@ -55,7 +56,8 @@ if (isset ($_POST["last_name"])) {
 if (isset ($_POST["question_framework"])) {
     $question_framework = $_POST["question_framework"];
     if ($A1 == $question_framework){
-        $score = $score+1;
+        $score++;
+        echo 'done';
     }
     elseif ($A1 != $question_framework){
         echo 'wrong';
@@ -66,14 +68,14 @@ if (isset ($_POST["question_framework"])) {
 if (isset ($_POST["question_language"])) {
     $question_language = $_POST["question_language"];
     if ($A2 == $question_language){
-        $score = $score+1;
+        $score++;
     }
 }
 
 if (isset ($_POST["question_suitable"])) {
     $question_suitable = $_POST["question_suitable"];
     if ($A3 == $question_suitable){
-        $score = $score+1;
+        $score++;
     }
 }
     
