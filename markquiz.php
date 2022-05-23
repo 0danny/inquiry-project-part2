@@ -11,8 +11,6 @@
 <!--Begin processing-->
 <?php
 require_once ("settings.php"); //connection info
-$score = 0;
-
 $conn = @mysqli_connect(
     $host,
     $user,
@@ -33,6 +31,7 @@ $A2 = "All of the above";
 $A3 = "";
 $A4 = "";
 $A5 = "13";
+$score = 0;
 
 //Checks if process was triggered by a form submit, if not display an error message
 if (isset ($_POST["student_number"])) {
@@ -57,13 +56,9 @@ if (isset ($_POST["question_framework"])) {
     $question_framework = $_POST["question_framework"];
     if ($A1 == $question_framework){
         $score++;
-        echo 'done';
-    }
-    elseif ($A1 != $question_framework){
-        echo 'wrong';
     }
     }
-        
+
 
 if (isset ($_POST["question_language"])) {
     $question_language = $_POST["question_language"];
