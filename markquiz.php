@@ -33,7 +33,7 @@ $A32 = "CPU intensive tasks";
 $A33 = "Multi-threaded applications";
 $A34 = "Real time communication";
 $A4 = "Cluster";
-$A5 = "1";
+$A5 = "13";
 $score = 0;
 
 //Checks if process was triggered by a form submit, if not display an error message
@@ -70,44 +70,19 @@ if (isset ($_POST["question_language"])) {
     }
 }
 
-if (isset ($_POST["question_suitable"])) {
-    $question_suitable_cpu_intensive = $_POST["question_suitable_cpu_intensive"];
-    if ($question_suitable_cpu_intensive == $A32){
-        echo '2';
-
-        if (isset ($_POST["question_suitable"])) {
-            $question_suitable_threaded = $_POST["question_suitable_threaded"];
-            if ($question_suitable_threaded == $A33){
-                echo '3';
-
-                if (isset ($_POST["question_suitable"])) {
-                    $question_suitable_server_side = $_POST["question_suitable_server_side"];
-                    if ($question_suitable_server_side == $A33){
-                        echo '1';
-
-                        if (isset ($_POST["question_suitable"])) {
-                            $question_suitable_realtime = $_POST["question_suitable_realtime"];
-                            if ($question_suitable_realtime != $A31){
-                                echo '4';}}}}
-
-                $score++;}}}}
-
 if (isset ($_POST["question_package"])) {
     $question_package = $_POST["question_package"];
-    $question_package = sanitise_input($question_package);
-    $A4 = sanitise_input($A4);
     if ($A4 == $question_package){
         $score++;
-        echo 'hello1';
     }
 }
-echo $A4;
-echo $question_package;
 
 if (isset ($_POST["question_years"])) {
     $question_years = $_POST["question_years"];
     if ($A5 == $question_years){
+        echo $score;
         $score++;
+        echo $score;
     }
 }
 
@@ -117,7 +92,6 @@ $last_name = sanitise_input($last_name);
 $question_framework = sanitise_input($question_framework);
 $question_language = sanitise_input($question_language);
 #$question_suitable = sanitise_input($question_suitable);
-
 $errMsg = "";
 
 if (is_numeric($student_number)== false) {
