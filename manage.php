@@ -27,7 +27,7 @@
         $sql_table="attempts";
     
         // Set up the SQL command to query or add data into the table
-        $query = "select attempt_id, date_time, first_name, last_name, student_number, number_of_attempts, score FROM attempts ORDER BY attempt_id";
+        $query = "SELECT attempt_id, date_time, first_name, last_name, student_number, number_of_attempts, score FROM attempts ORDER BY attempt_id DESC";
     
         // execute the query and store result into the result pointer
         $result = mysqli_query ($conn, $query);

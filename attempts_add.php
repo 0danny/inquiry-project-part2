@@ -30,17 +30,20 @@ use LDAP\Result;
     $student_number = trim($_POST["student_number"]);
     $sql_table ="attempts";
 
-    $query = "SELECT number_of_attempts FROM attempts WHERE student_number == $student_number"; 
-
+    $query = "SELECT number_of_attempts FROM attempts WHERE student_number = $student_number ORDER BY attempt_id DESC"; 
     $result = mysqli_query($conn, $query);
-    if (!$result){
-        $number_of_attempts = 0;
-        echo 'no student';}
-    if ($result >= 2){
+    $row = mysqli_fetch_row($result);
+
+    if ($row[0] >= 2){
         echo "Already greater than 2. <br> You cannot submit.";
     }
     else{
-        $number_of_attempts++; // adds 1
+    if (!$row){
+        $number_of_attempts = 1;
+    }
+    if ($row[0] == 1){
+        $number_of_attempts = 2;
+    }
         $student_number = trim($_POST["student_number"]);
         $first_name = trim($_POST["first_name"]);
         $last_name = trim($_POST["last_name"]);
@@ -60,7 +63,7 @@ use LDAP\Result;
                 echo "<p class=\"ok\">Successfully added New Attempt<p>";
                 require_once('manage.php');
             } // if successful query operation
-    }
+        }
 
         // close the database connection
         @mysqli_close($conn);

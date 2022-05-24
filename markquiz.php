@@ -28,9 +28,12 @@ function sanitise_input($data) {
 //ANSWERS
 $A1 = "JavaScript";
 $A2 = "All of the above";
-$A3 = "";
-$A4 = "";
-$A5 = "13";
+$A31 = "Writing server-side applications";
+$A32 = "CPU intensive tasks";
+$A33 = "Multi-threaded applications";
+$A34 = "Real time communication";
+$A4 = "Cluster";
+$A5 = "1";
 $score = 0;
 
 //Checks if process was triggered by a form submit, if not display an error message
@@ -68,14 +71,44 @@ if (isset ($_POST["question_language"])) {
 }
 
 if (isset ($_POST["question_suitable"])) {
-    $question_suitable = $_POST["question_suitable"];
-    if ($A3 == $question_suitable){
+    $question_suitable_cpu_intensive = $_POST["question_suitable_cpu_intensive"];
+    if ($question_suitable_cpu_intensive == $A32){
+        echo '2';
+
+        if (isset ($_POST["question_suitable"])) {
+            $question_suitable_threaded = $_POST["question_suitable_threaded"];
+            if ($question_suitable_threaded == $A33){
+                echo '3';
+
+                if (isset ($_POST["question_suitable"])) {
+                    $question_suitable_server_side = $_POST["question_suitable_server_side"];
+                    if ($question_suitable_server_side == $A33){
+                        echo '1';
+
+                        if (isset ($_POST["question_suitable"])) {
+                            $question_suitable_realtime = $_POST["question_suitable_realtime"];
+                            if ($question_suitable_realtime != $A31){
+                                echo '4';}}}}
+
+                $score++;}}}}
+
+if (isset ($_POST["question_package"])) {
+    $question_package = $_POST["question_package"];
+    $question_package = sanitise_input($question_package);
+    $A4 = sanitise_input($A4);
+    if ($A4 == $question_package){
         $score++;
+        echo 'hello1';
     }
 }
-    
-else {
+echo $A4;
+echo $question_package;
 
+if (isset ($_POST["question_years"])) {
+    $question_years = $_POST["question_years"];
+    if ($A5 == $question_years){
+        $score++;
+    }
 }
 
 $student_number = sanitise_input($student_number);
@@ -83,8 +116,7 @@ $first_name = sanitise_input($first_name);
 $last_name = sanitise_input($last_name);
 $question_framework = sanitise_input($question_framework);
 $question_language = sanitise_input($question_language);
-$question_suitable = sanitise_input($question_suitable);
-$score = sanitise_input($score);
+#$question_suitable = sanitise_input($question_suitable);
 
 $errMsg = "";
 
@@ -100,8 +132,6 @@ else if ((9999999 < $student_number) && ($student_number < 1000000000)){
 else if (($student_number > 9999999999)) {
     $errMsg .= "<p>Has to be 7 or 10 characters.</p>";
 }
-
-
 
 
 if ($first_name=="") {
