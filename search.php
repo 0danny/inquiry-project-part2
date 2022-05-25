@@ -59,7 +59,12 @@ if ($conn) {
                     echo "</table>\n ";
                     // Frees up the memory, after using the result pointer
                     mysqli_free_result($result);
-                }}}
+                }
+            else{
+                echo("There are no attempts under firstname: $first_name and lastname: $last_name");
+            }
+            }
+            }
     elseif (isset($_POST["student_number"])){
         $student_number=$_POST["student_number"];
         $query = "SELECT * FROM attempts WHERE student_number=$student_number";

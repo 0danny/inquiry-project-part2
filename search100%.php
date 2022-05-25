@@ -16,10 +16,9 @@ $pwd,
 $sql_db
 );
 if ($conn) {
-    if (isset($_POST["first_name"])){
-        $first_name=trim($_POST["first_name"]);
-        $last_name=trim($_POST["last_name"]);
-        $query = "SELECT * FROM attempts WHERE first_name='$first_name' AND last_name='$last_name'";
+    if (isset($_POST["100%_attempts"])){
+        $first_name=trim($_POST["100%_attempts"]);
+        $query = "SELECT * FROM attempts WHERE score= AND last_name='$last_name'";
         $result = mysqli_query($conn, $query);
         if (!$result) {
             echo "<p>Something is wrong with ", $query, "</p>";
