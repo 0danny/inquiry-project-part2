@@ -11,6 +11,7 @@
             <a href="topic.php">Topic</a>
             <a href="quiz.php">Quiz</a>
             <a href="enhancements.php">Enchancements</a>
+            <a href="phpenhancements.php">PHP Enchancements</a>
         </nav>
 
         <div class="link_wrapper">
