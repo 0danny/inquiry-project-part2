@@ -24,7 +24,7 @@ if (!$conn) {
     } 
     else {
     // Upon successful connection
-    echo 'hello';
+    echo "Listing all attempts:";
     $sql_table="attempts";
 
     // Set up the SQL command to query or add data into the table

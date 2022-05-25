@@ -22,7 +22,6 @@ if ($conn) {
     echo "<p>Connection successful!<p>";
     $query = "DELETE FROM attempts WHERE student_number=$student_number";
     $result = mysqli_query($conn, $query);
-    echo $query;
     if ($result) {
         echo "<p>delete operation successful!</p>";
         header("location:manage.php");
