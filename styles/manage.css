@@ -8,10 +8,6 @@
 */
 
 .manage_form {
-    padding: 30px;
-}
-
-.manage_form fieldset {
     border-radius: 20px;
     padding: 20px;
     border-color: #7C97BA;
@@ -42,18 +38,4 @@
 
 .manage_form input:hover {
     background-color: #456285;
-}
-
-.manage_form hr {
-    border-color: #456285;
-}
-
-.manage_form select {
-    outline: none;
-    background-color: #1F487E;
-    border: none;
-    padding: 10px 20px 10px 10px;
-    font-size: .8rem;
-    border-radius: 20px;
-    color: white;
 }
