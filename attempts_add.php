@@ -70,9 +70,4 @@ use LDAP\Result;
         // if successful database connection
 ?>
 </body>
-<h2>Delete</h2>
-<form method="post" action="delete.php">
-    <p>Enter student number: <input type="text" name="student_number"></p>
-    <p><input type="submit"></p>
-</form>
 </html>

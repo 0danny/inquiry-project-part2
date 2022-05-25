@@ -74,4 +74,21 @@
         }   // if successful database connection
 ?>
 </body>
+
+<h2>Delete</h2>
+<form method="post" action="delete.php">
+    <p>Enter student number: <input type="text" name="student_number"></p>
+    <p><input type="submit"></p>
+</form>
+
+<form method="post" action="listall.php">
+    <p>Display All Students: <input type="checkbox" name="checkbox_name" value="checkox_value"></p>
+</form>
+
+<form method="post" action="listall.php">
+
+    <p>Enter student number: <input type="text" name="student_number"></p>
+    <p><input type="submit"></p>
+
+</form>
 </html>
