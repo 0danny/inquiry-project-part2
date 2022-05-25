@@ -50,13 +50,12 @@
 
     <section class="paragraph">
         <p>
-        In the html element of the quiz page, the names of the checkboxes need to be followed by array brackets, [], to ensure that all of the checkbox data is collected. 
-        Without these brackts, the checkbox $_POST method will just return the last checkbox value selected. (lines 114, 120, 125, 130 under ‘name=’)  <!-- ENTER DESCRIPTION HERE --> <a href="quiz.php">Quiz</a>
+        In the html element of the quiz page, the names of the checkboxes need to be followed by array brackets, [], to ensure that all of the checkbox data is collected. <br/>
+        Without these brackets, the checkbox $_POST method will just return the last checkbox value selected. (lines 114, 120, 125, 130 under ‘name=’)  <!-- ENTER DESCRIPTION HERE --> <a href="quiz.php">Quiz</a>
             <br><br>
             <img src="images/htmlarray.png" style="width:600px;height: atuo;" alt="HTML array for checkbox">
             <br><br>
             <br> Website used as reference: <a href="https://stackoverflow.com/questions/4997252/get-post-from-multiple-checkboxes">Click Here</a> <!-- ENTER WEBSITE SAM G USED -->
-          ">Click Here</a>
         </p>
     </section>
 
