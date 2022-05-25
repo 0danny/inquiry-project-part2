@@ -37,7 +37,7 @@
         <p>
             Description <!-- ENTER DESCRIPTION HERE --> <a href="markquiz.php">Markquiz</a>
             <br><br>
-            <img src="images/countphp.png" style="width:660px;height:100px;" alt="Count $check_array variable">
+            <img src="images/countphp.png" style="width:600px;height: auto;" alt="Count $check_array variable">
 
             <br> Website used as reference: <a href=" ">Click Here</a> <!-- ENTER WEBSITE SAM G USED -->
         </p>
@@ -52,7 +52,7 @@
         <p>
             Description <!-- ENTER DESCRIPTION HERE --> <a href="quiz.php">Quiz</a>
             <br><br>
-            <img src="images/htmlarray.png" style="width:500px;height:60px;" alt="Table Border Spacing Example">
+            <img src="images/htmlarray.png" style="width:600px;height: atuo;" alt="HTML array for checkbox">
             <br><br>
             <br> Website used as reference: <a href=" ">Click Here</a> <!-- ENTER WEBSITE SAM G USED -->
           ">Click Here</a>
