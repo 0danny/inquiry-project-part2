@@ -35,7 +35,7 @@ use LDAP\Result;
     $row = mysqli_fetch_row($result);
 
     if ($row[0] >= 2){
-        echo "Already greater than 2. <br> You cannot submit.";
+        echo "Attempts already greater than 2. <br> You cannot submit another attempt.";
     }
     else{
     if (!$row){

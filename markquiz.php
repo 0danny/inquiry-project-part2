@@ -70,19 +70,25 @@ if (isset ($_POST["question_language"])) {
     }
 }
 
+
+
 if (isset ($_POST["question_package"])) {
     $question_package = $_POST["question_package"];
     if ($A4 == $question_package){
         $score++;
     }
 }
+echo 'hello';
+if (isset($_POST['question_suitable'])) 
+{
+    print_r($_POST['question_suitable']);
+    echo 'hello';
+}
 
 if (isset ($_POST["question_years"])) {
     $question_years = $_POST["question_years"];
     if ($A5 == $question_years){
-        echo $score;
         $score++;
-        echo $score;
     }
 }
 
@@ -91,7 +97,6 @@ $first_name = sanitise_input($first_name);
 $last_name = sanitise_input($last_name);
 $question_framework = sanitise_input($question_framework);
 $question_language = sanitise_input($question_language);
-#$question_suitable = sanitise_input($question_suitable);
 $errMsg = "";
 
 if (is_numeric($student_number)== false) {

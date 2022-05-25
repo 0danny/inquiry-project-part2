@@ -111,24 +111,24 @@
 
                 <!-- Suitable Question, Input type: Checkbox -->
                 <p>
-                    <input type="checkbox" value="Writing server-side applications" name="question_suitable" id="question_suitable_server_side" checked />
+                    <input type="checkbox" name="question[]" value="Writing server-side applications" id="server_side" checked />
                     <!-- First checkbox "checked" attribute to ensure user selection. -->
-                    <label for="question_suitable_server_side">Writing server-side applications</label>
+                    <label for="server_side">Writing server-side applications</label>
 
                     <br>
 
-                    <input type="checkbox" value="CPU intensive tasks" name="question_suitable" id="question_suitable_cpu_intensive" />
-                    <label for="question_suitable_cpu_intensive">CPU intensive tasks</label>
+                    <input type="checkbox" name="question[]" value="CPU intensive tasks" id="cpu_intensive" />
+                    <label for="cpu_intensive">CPU intensive tasks</label>
 
                     <br>
 
-                    <input type="checkbox" value="Multi-threaded applications" name="question_suitable" id="question_suitable_threaded" />
-                    <label for="question_suitable_threaded">Multi-threaded applications</label>
+                    <input type="checkbox" name="question[]" value="Multi-threaded applications" id="threaded" />
+                    <label for="threaded">Multi-threaded applications</label>
 
                     <br>
 
-                    <input type="checkbox" value="Real time communication" name="question_suitable" id="question_suitable_realtime" />
-                    <label for="question_suitable_realtime">Real time communication</label>
+                    <input type="checkbox" name="question[]" value="Real time communication" id="realtime" />
+                    <label for="realtime">Real time communication</label>
 
                 </p>
 
