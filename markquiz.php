@@ -28,10 +28,8 @@ function sanitise_input($data) {
 //ANSWERS
 $A1 = "JavaScript";
 $A2 = "All of the above";
-$A31 = "Writing server-side applications";
 $A32 = "CPU intensive tasks";
 $A33 = "Multi-threaded applications";
-$A34 = "Real time communication";
 $A4 = "Cluster";
 $A5 = "13";
 $score = 0;
@@ -78,12 +76,17 @@ if (isset ($_POST["question_package"])) {
         $score++;
     }
 }
-echo 'hello';
-if (isset($_POST['question_suitable'])) 
-{
-    print_r($_POST['question_suitable']);
-    echo 'hello';
-}
+
+if (isset($_POST['question_suitable'])){
+    $check_array = $_POST['question_suitable'];
+    if ($check_array[0] == $A32){
+        if ($check_array[1] == $A33){
+            if (count($check_array) == 2){
+                $score++;
+            }
+        }
+    }
+        }
 
 if (isset ($_POST["question_years"])) {
     $question_years = $_POST["question_years"];
