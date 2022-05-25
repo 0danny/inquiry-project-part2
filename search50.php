@@ -4,6 +4,10 @@
     <meta charset="utf-8"/> 
     <title>Student Search</title>
     <!-- other meta here -->
+    <link rel="icon" href="images/node_logo.webp">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/quiz.css">
 </head>
 <body>
 <?php
@@ -15,10 +19,13 @@ $user,
 $pwd,
 $sql_db
 );
-if ($conn) {
-    if (isset($_POST["100%_attempts"])){
-        $first_name=trim($_POST["100%_attempts"]);
-        $query = "SELECT student_number, first_name, last_name FROM attempts WHERE score='100%' AND number_of_attempts='1'";
+
+if (!$conn) {
+    echo "<p>Connection failed!</p>";
+    echo mysqli_connect_error();
+}
+else{
+        $query = "SELECT student_number, first_name, last_name FROM attempts WHERE score<50 AND number_of_attempts=2";
         $result = mysqli_query($conn, $query);
         if (!$result) {
             echo "<p>Something is wrong with ", $query, "</p>";
@@ -47,13 +54,9 @@ if ($conn) {
                 echo "</table>\n ";
                 // Frees up the memory, after using the result pointer
                 mysqli_free_result($result);
-                }}
+                }
 
     mysqli_close($conn);}
-else {
-    echo "<p>Connection failed!</p>";
-    echo mysqli_connect_error();
-}
 ?>
 </body>
 </html>

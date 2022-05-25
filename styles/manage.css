@@ -1,34 +1,34 @@
 /* 
 /* 
-    filename: [quiz.css] 
-    author: [Daniel Paolone] 
-    created: [1/4/2022] 
-    last modified: [7/4/2022] 
-    description: [This CSS document styles a html file called quiz.html] 
+    filename: [manage.css] 
+    author: [Sam Green] 
+    created: [25/5/2022] 
+    last modified: [25/5/2022] 
+    description: [This CSS document styles a php file called manage.php] 
 */
 
-.quiz_form {
+.manage_form {
     padding: 30px;
 }
 
-.quiz_form fieldset {
+.manage_form fieldset {
     border-radius: 20px;
     padding: 20px;
     border-color: #7C97BA;
 }
 
-.quiz_form legend {
+.manage_form legend {
     color: #83CD29;
     font-weight: bold;
     padding: 10px;
     text-align: center;
 }
 
-.quiz_form label {
+.manage_form label {
     color: #7C97BA;
 }
 
-.quiz_form input {
+.manage_form input {
     background-color: #253447;
     color: white;
     padding: 10px;
@@ -40,15 +40,15 @@
     transition: 0.2s all;
 }
 
-.quiz_form input:hover {
+.manage_form input:hover {
     background-color: #456285;
 }
 
-.quiz_form hr {
+.manage_form hr {
     border-color: #456285;
 }
 
-.quiz_form select {
+.manage_form select {
     outline: none;
     background-color: #1F487E;
     border: none;
@@ -56,21 +56,4 @@
     font-size: .8rem;
     border-radius: 20px;
     color: white;
-}
-
-#quiz_submit {
-    padding: 20px;
-    width: 100%;
-    background-color: #1F487E;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 30px;
-    border: none;
-    transition: 0.2s all;
-    cursor: pointer;
-}
-
-#quiz_submit:hover {
-    background-color: #253447;
 }

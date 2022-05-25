@@ -4,12 +4,13 @@
     <meta charset="utf-8"/> 
     <title>Student Search</title>
     <!-- other meta here -->
+    <link rel="icon" href="images/node_logo.webp">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/quiz.css">
 </head>
 <body>
 <?php
-
-
-
 
 require_once "settings.php";
 $conn = @mysqli_connect($host,
@@ -46,8 +47,7 @@ if (!$conn) {
     ."<th scope=\"col\">last_name</th>\n "
     ."<th scope=\"col\">student_number</th>\n "
     ."<th scope=\"col\">number_of_attempts</th>\n "
-    ."<th scope=\"col\">score</th>\n "
-
+    ."<th scope=\"col\">score (%)</th>\n "
     ."<tr>\n ";
 
     // retrieve current record pointed by the result pointer

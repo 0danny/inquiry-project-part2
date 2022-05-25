@@ -1,3 +1,4 @@
+
 <header>
         <div class="header_title_wrapper">
             <a href="index.php">
@@ -12,6 +13,7 @@
             <a href="quiz.php">Quiz</a>
             <a href="enhancements.php">Enchancements</a>
             <a href="phpenhancements.php">PHP Enchancements</a>
+            <a href="manage.php">Manage Quiz Queries</a>
         </nav>
 
         <div class="link_wrapper">

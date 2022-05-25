@@ -48,7 +48,7 @@ use LDAP\Result;
         $first_name = trim($_POST["first_name"]);
         $last_name = trim($_POST["last_name"]);
         $date_time = (date("Y/m/d") . ' ' . date("h:i:sa")); // gets current time and posts it
-        $score = ($score/5)*100 . '%';
+        $score = ($score/5)*100;
         
         $query = "insert into $sql_table (date_time, first_name, last_name, student_number, number_of_attempts, score) 
         values ('$date_time', '$first_name', '$last_name', '$student_number', '$number_of_attempts', '$score')";
@@ -61,7 +61,15 @@ use LDAP\Result;
             } else {
                 // display an operation successful message
                 echo "<p class=\"ok\">Successfully added New Attempt<p>";
-                require_once('manage.php');
+
+
+
+
+
+
+
+
+                
             } // if successful query operation
         }
 
