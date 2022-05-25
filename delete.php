@@ -19,7 +19,7 @@ $pwd,
 $sql_db
 );
 if ($conn) {
-    echo "<p>Connection unsuccessful!<p>";
+    echo "<p>Connection successful!<p>";
     $query = "DELETE FROM attempts WHERE student_number=$student_number";
     $result = mysqli_query($conn, $query);
     echo $query;
