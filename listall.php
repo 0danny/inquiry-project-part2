@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/> 
-    <title>Student Search</title>
+    <title>List All Attempts</title>
     <!-- other meta here -->
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
@@ -25,7 +25,6 @@ if (!$conn) {
     } 
     else {
     // Upon successful connection
-    echo "Listing all attempts:";
     $sql_table="attempts";
 
     // Set up the SQL command to query or add data into the table
@@ -38,37 +37,46 @@ if (!$conn) {
     if (!$result) {
     echo "<p>Something is wrong with ", $query, "</p>";
     } else {
-    // Display the retrieved records
-    echo "<table border=\"1\">\n";
-    echo "<tr>\n "
-    ."<th scope=\"col\">attempt_id</th>\n "
-    ."<th scope=\"col\">date_time</th>\n "
-    ."<th scope=\"col\">first_name</th>\n "
-    ."<th scope=\"col\">last_name</th>\n "
-    ."<th scope=\"col\">student_number</th>\n "
-    ."<th scope=\"col\">number_of_attempts</th>\n "
-    ."<th scope=\"col\">score (%)</th>\n "
-    ."<tr>\n ";
+        if (mysqli_num_rows( $result ) !=0){
+            echo "Listing all attempts:";
+            // Display the retrieved records
+            echo "<table border=\"1\">\n";
+            echo "<tr>\n "
+            ."<th scope=\"col\">attempt_id</th>\n "
+            ."<th scope=\"col\">date_time</th>\n "
+            ."<th scope=\"col\">first_name</th>\n "
+            ."<th scope=\"col\">last_name</th>\n "
+            ."<th scope=\"col\">student_number</th>\n "
+            ."<th scope=\"col\">number_of_attempts</th>\n "
+            ."<th scope=\"col\">score (%)</th>\n "
+            ."<tr>\n ";
 
-    // retrieve current record pointed by the result pointer
+            // retrieve current record pointed by the result pointer
 
-    while ($row = mysqli_fetch_assoc ($result)) {
-        echo "<tr>\n";
-        echo "<td>", $row["attempt_id"], "</td>\n";
-        echo "<td>", $row["date_time"], "</td>\n";
-        echo "<td>", $row["first_name"], "</td>\n";
-        echo "<td>", $row["last_name"], "</td>\n";
-        echo "<td>", $row["student_number"], "</td>\n";
-        echo "<td>", $row["number_of_attempts"], "</td>\n";
-        echo "<td>", $row["score"], "</td>\n";
-        
-        echo "</tr>\n";
-        }
+            while ($row = mysqli_fetch_assoc ($result)) {
+                echo "<tr>\n";
+                echo "<td>", $row["attempt_id"], "</td>\n";
+                echo "<td>", $row["date_time"], "</td>\n";
+                echo "<td>", $row["first_name"], "</td>\n";
+                echo "<td>", $row["last_name"], "</td>\n";
+                echo "<td>", $row["student_number"], "</td>\n";
+                echo "<td>", $row["number_of_attempts"], "</td>\n";
+                echo "<td>", $row["score"], "</td>\n";
+                
+                echo "</tr>\n";
+                }
 
-        echo "</table>\n ";
-        // Frees up the memory, after using the result pointer
-        mysqli_free_result($result);
-        }}   // if successful query operation
+                echo "</table>\n ";
+                // Frees up the memory, after using the result pointer
+                mysqli_free_result($result);
+                }   // if successful query operation
+            else{
+                echo("There are no attempts currently. Please complete the quiz first.");
+                echo "<form method='post' action='manage.php'>";
+                echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+                echo "</form>";
+                
+            }}}
 
         mysqli_close($conn);
 ?>

@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/> 
-    <title>Student Search</title>
+    <title>Student Change</title>
+    <meta name="description" content="Change score function PHP">
+    <meta name="keywords" content="PHP, HTML, MYSQL, Manage page">
+    <meta name="author" content="Adam Horvath, Sam Green"/>
+    <meta name="date" content="Last Modified: 26/5/22"/>
     <!-- other meta here -->
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">

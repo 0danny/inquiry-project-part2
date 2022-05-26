@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/> 
-    <title>Student Search</title>
+    <title>Student delete</title>
+    <meta name="description" content="Confirm delete function PHP">
+    <meta name="keywords" content="PHP, HTML, MYSQL, Manage page">
+    <meta name="author" content="Adam Horvath, Sam Green"/>
+    <meta name="date" content="Last Modified: 26/5/22"/>
     <!-- other meta here -->
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
@@ -25,6 +29,9 @@ if ($conn) {
         $student_number=$_POST["student_number"];
         if ($student_number == ""){
             echo "<p>You have not entered a student number</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
         }
         else{
         $query = "SELECT * FROM attempts WHERE student_number=$student_number";
