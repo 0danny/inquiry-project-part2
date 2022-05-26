@@ -9,33 +9,70 @@
 
 .manage_form {
     border-radius: 20px;
+    border-color: #7C97BA;
+}
+
+.manage-container {
+    padding: 20px;
+}
+
+fieldset {
+    border-radius: 20px;
     padding: 20px;
     border-color: #7C97BA;
 }
 
-.manage_form legend {
+legend {
     color: #83CD29;
     font-weight: bold;
     padding: 10px;
     text-align: center;
 }
 
-.manage_form label {
+.subheader {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+label {
     color: #7C97BA;
 }
 
-.manage_form input {
+.manage_form_allattempts {
+    padding: 20px;
+    width: 100%;
+    background-color: #1F487E;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+input {
     background-color: #253447;
     color: white;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     outline: none;
     border: 1px solid #83CD29;
     border-radius: 20px;
-    margin-left: 10px;
     font-size: 1em;
     transition: 0.2s all;
 }
 
-.manage_form input:hover {
+input[type=submit] {
+    width: 100%;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+input:hover {
     background-color: #456285;
 }

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="description" content="Creating Web Applications Lab 10" />
-<meta name="keywords" content="PHP, Mysql" />
-<title>Quiz supervisor queries</title>
 
-<link rel="icon" href="images/node_logo.webp">
-<title>Node JS Manage Page</title>
-<link rel="stylesheet" href="styles/style.css">
-<link href="styles/responsive.css" rel="stylesheet" />
-<link rel="stylesheet" href="styles/quiz.css">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Creating Web Applications Lab 10" />
+    <meta name="keywords" content="PHP, Mysql" />
+    <title>Quiz supervisor queries</title>
+
+    <link rel="icon" href="images/node_logo.webp">
+    <title>Node JS Manage Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/manage.css">
 </head>
+
 <body>
 
 <?php
     include_once ("header.inc");
     require_once ("settings.php"); //connection info
+
+    $password = "helloworld";
 
     $conn = @mysqli_connect(
         $host,
@@ -26,65 +30,45 @@
     );
     // Checks if connection is successful
     
+    if(isset($_POST["management_pass"]))
+    {
+        if($_POST["management_pass"] == $password)
+        {
+            echo '<style>.management_fieldset { display: none; }</style>';
+            include_once ("manage.inc");
+        }
+        else
+        {
+            echo "<p style=\"padding: 10px; color: red;\">The password you have entered is incorrect.</p>";
+        }
+    }
     
-            // close the database connection
-            mysqli_close($conn);
-           // if successful database connection
+    // close the database connection
+    mysqli_close($conn);
+    // if successful database connection
+
 ?>
-<h3 class="subheader">Manage Page</h3>
-</body>
-<form method="post" action="listall.php" class="manage_form">
-    <p><input type="submit" name="all_attempts" value="List All Attempts"></p>
-</form>
 
-<form method="post" action="search.php" class="manage_form">
-    <p>
-        <label for="student_number">Enter student number:</label> 
-        <input type="text" name="student_number" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
-        <input type="submit" value="Search Student Number Attempt"/>
-    </p>
-</form>
 
-<form method="post" action="search.php" class="manage_form">
-    <p>
-        <label for="first_name">Enter first name:</label>
-        <input type="text" name="first_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type first name..." require=""/>
-        <label for="last_name">Enter last name:</label>
-        <input type="text" name="last_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type last name..."/>
-        <input type="submit" value="Search Student Name Attempt"/>
-    </p>
-</form>
+<fieldset class="management_fieldset">
+    <legend>Password Form</legend>
+            
+    <form method="post" action="manage.php" class="management_form">
+        <p>
+            <label for="management_pass">Enter the management password: </label> 
+            <input type="password" name="management_pass" placeholder="Password..." max="40" size="40"/>
+        </p>
+        <br>
 
-<form method="post" action="search100.php" class="manage_form">
-    <p>
-        <input type="submit" value="List Students Who Got 100% On Attempt 1" name='100'/>
-    </p>
-</form>
+        <input type="submit" value="Login"/>
+    </form>
 
-<form method="post" action="search50.php" class="manage_form">
-    <p>
-        <input type="submit" value="List Students Who Got Less Than 50% On Attempt 2"/>
-    </p>
-</form>
+</fieldset>
 
-<form method="post" action="delete.php" class="manage_form">
-    <p>
-        <label for="first_name">Enter student number:</label>
-        <input type="text" name="student_number" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
-        <input type="submit" value="Delete"/>
-    </p>
-</form>
-
-<form method="post" action="change.php" class="manage_form">
-    <p>
-        <label for="first_name">Enter student number:</label>
-        <input type="text" name="student_number" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
-        <label for="number_of_attempts">Select attempt number:</label>
-        <input type="number" name="number_of_attempts" min="1" max="2"/>
-        <input type="submit" value="Change Score Of Attempt"/>
-    </p>
-</form>
 <?php
-	    include_once "main_footer.inc";
-    ?>
+    include_once "main_footer.inc";
+?>
+
+</body>
+
 </html>
