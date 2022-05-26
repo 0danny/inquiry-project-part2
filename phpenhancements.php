@@ -59,6 +59,16 @@
         </p>
     </section>
 
+    <section class="paragraph">
+        <p>
+        The use of a password locked management page takes our project above and beyond the basic scope. The use of a password allows us to enter in and manage information for the backend portion of the website <br> 
+        in a useable interface while keeping malicious and common users out. The password is sent in the php and executed on the server so therefore it is not visible in any way to the normal users of the website.
+        <a href="manage.php">Management</a>
+            <br><br>
+            <img src="images/password_management.png" style="width:1000px;height: auto;" alt="The password interface for the management page.">
+        </p>
+    </section>
+
     <?php
 	    include_once "main_footer.inc";
     ?>
