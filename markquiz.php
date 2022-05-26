@@ -109,15 +109,11 @@ $errMsg = "";
 
 if (is_numeric($student_number)== false) {
     $errMsg .= "<p>Your ID must be a number.</p>";
-}
-else if ((1000000 > $student_number)){
-    $errMsg .= "<p>Your ID has to be 7 or 10 characters.</p>";
-}
-else if ((9999999 < $student_number) && ($student_number < 1000000000)){
-    $errMsg .= "<p>Your ID has to be 7 or 10 characters.</p>";
-}
-else if (($student_number > 9999999999)) {
-    $errMsg .= "<p>Your ID has to be 7 or 10 characters.</p>";
+    }
+elseif (!preg_match('/^[0-9]{7}$/',$student_number)){
+    if (!preg_match('/^[0-9]{10}$/',$student_number)){
+        $errMsg .= "<p>Your ID has to be 7 or 10 digits.</p>";
+        echo '1';}
 }
 
 
