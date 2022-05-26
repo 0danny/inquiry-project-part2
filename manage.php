@@ -40,7 +40,7 @@
 <form method="post" action="search.php" class="manage_form">
     <p>
         <label for="student_number">Enter student number:</label> 
-        <input type="text" name="student_number"/>
+        <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
         <input type="submit" value="Search Student Number Attempt"/>
     </p>
 </form>
@@ -48,9 +48,9 @@
 <form method="post" action="search.php" class="manage_form">
     <p>
         <label for="first_name">Enter first name:</label>
-        <input type="text" name="first_name"/>
+        <input type="text" name="first_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type first name..."/>
         <label for="last_name">Enter last name:</label>
-        <input type="text" name="last_name"/>
+        <input type="text" name="last_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type last name..."/>
         <input type="submit" value="Search Student Name Attempt"/>
     </p>
 </form>
@@ -63,14 +63,14 @@
 
 <form method="post" action="search50.php" class="manage_form">
     <p>
-        <input type="submit" value="List Students Who Got 50% Or Less On Attempt 2"/>
+        <input type="submit" value="List Students Who Got Less Than 50% On Attempt 2"/>
     </p>
 </form>
 
 <form method="post" action="delete.php" action="delete2.php" class="manage_form">
     <p>
         <label for="first_name">Enter student number:</label>
-        <input type="text" name="student_number"/>
+        <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
         <input type="submit" value="Delete"/>
     </p>
 </form>
@@ -78,9 +78,9 @@
 <form method="post" action="change.php" action="update.php" class="manage_form">
     <p>
         <label for="first_name">Enter student number:</label>
-        <input type="text" name="student_number"/>
-        <label for="number_of_attempts">Enter attempt number:</label>
-        <input type="text" name="number_of_attempts"/>
+        <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
+        <label for="number_of_attempts">Select attempt number:</label>
+        <input type="number" name="number_of_attempts" min="1" max="2"/>
         <input type="submit" value="Change Score Of Attempt"/>
     </p>
 </form>

@@ -25,6 +25,9 @@ if (!$conn) {
     echo mysqli_connect_error();
 }
 else{
+    // Upon successful connection
+    echo "Listing all students with less than 50% score on attempt 2:";
+
         $query = "SELECT student_number, first_name, last_name FROM attempts WHERE score<50 AND number_of_attempts=2";
         $result = mysqli_query($conn, $query);
         if (!$result) {

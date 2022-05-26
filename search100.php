@@ -25,6 +25,9 @@ if (!$conn) {
     echo mysqli_connect_error();
 }
 else{
+    // Upon successful connection
+    echo "Listing all students with 100% score on attempt 1:";
+
         $query = "SELECT student_number, first_name, last_name FROM attempts WHERE score='100' AND number_of_attempts='1'";
         $result = mysqli_query($conn, $query);
         if (!$result) {
