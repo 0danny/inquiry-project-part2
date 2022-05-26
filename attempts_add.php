@@ -26,6 +26,25 @@ use LDAP\Result;
         $sql_db
     );
 if ($conn) {
+    $query = "SELECT * FROM attempts";
+    $result = mysqli_query($conn, $query);
+
+    if(!$result){
+        $query = "CREATE TABLE `attempts` (
+            `attempt_id` int(11) NOT NULL AUTO_INCREMENT,
+            `date_time` text NOT NULL,
+            `first_name` text NOT NULL,
+            `last_name` text NOT NULL,
+            `student_number` int(11) NOT NULL,
+            `number_of_attempts` int(1) DEFAULT NULL,
+            `score` int(11) DEFAULT NULL,
+            PRIMARY KEY (`attempt_id`))
+            ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1";
+
+            $result = mysqli_query($conn, $query);
+    }
+
+
     // disallows attempt if score is equal to 0
     if ($score == 0 ) {
         echo "<p>Your score is 0. Please modify your answer.</p>";
