@@ -26,18 +26,18 @@
     );
 if ($conn) {
     // disallows attempt if score is equal to 0
-    $query = "SELECT * attempts";
+    $query = "SELECT * FROM attempts";
     $result = mysqli_query($conn, $query);
             
     if(!$result){
         $query = "CREATE TABLE attempts(
             attempt_id AUTO_INCREMENT PRIMARY KEY INT(11),
-            date_time TEXT /*COLLATE latin1_swedish_ci,*/
-            first_name TEXT /*COLLATE latin1_swedish_ci,*/
-            last_name TEXT /*COLLATE latin1_swedish_ci,*/
+            date_time TEXT, /*COLLATE latin1_swedish_ci,*/
+            first_name TEXT, /*COLLATE latin1_swedish_ci,*/
+            last_name TEXT, /*COLLATE latin1_swedish_ci,*/
             student_number INT(11),
             number_of_attempts INT(1) NULL, 
-            score INT(11) NULL";
+            score INT(11) NULL)";
         echo "ERROR"; 
         $result = mysqli_query($conn, $query);
        
