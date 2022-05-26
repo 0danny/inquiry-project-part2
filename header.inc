@@ -10,9 +10,9 @@
         <nav class="top_navigation">
             <a href="index.php">Home</a>
             <a href="topic.php">Topic</a>
-            <a href="quiz.php">Quiz</a>
             <a href="enhancements.php">Enchancements</a>
             <a href="phpenhancements.php">PHP Enchancements</a>
+            <a href="quiz.php">Quiz</a>
             <a href="manage.php">Manage Quiz Queries</a>
         </nav>
 
