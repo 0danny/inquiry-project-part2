@@ -19,9 +19,14 @@ $user,
 $pwd,
 $sql_db
 );
+
 if ($conn) {
     if (isset($_POST["student_number"])){
         $student_number=$_POST["student_number"];
+        if ($student_number == ""){
+            echo "<p>You have not entered a student number</p>";
+        }
+        else{
         $query = "SELECT * FROM attempts WHERE student_number=$student_number";
         $result = mysqli_query($conn, $query);
         if (!$result) {
@@ -67,9 +72,10 @@ if ($conn) {
                     echo "<p>No<input type='radio' value='no' name='answer'></p>>";
                     echo "<p><input type='submit'></p>";
                     echo "</form>";}
+                
             else{
                 echo("There are no attempts under student number: $student_number");
-            }}}
+            }}}}
 mysqli_close($conn);}
 
 else {
