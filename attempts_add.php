@@ -10,6 +10,7 @@
     <meta name="date" content="Last Modified: 26/5/22"/>
 <meta name="keywords" content="PHP, Mysql" />
 <title>Creating connection to MySQL database</title>
+<link rel="stylesheet" href="styles/sidepage.css">
 </head>
 <body>
 <?php
@@ -27,7 +28,7 @@ use LDAP\Result;
 if ($conn) {
     // disallows attempt if score is equal to 0
     if ($score == 0 ) {
-        echo "Your score is 0. Please modify your answer.";
+        echo "<p>Your score is 0. Please modify your answer.</p>";
         exit();
     }
 
@@ -40,7 +41,7 @@ if ($conn) {
     $row = mysqli_fetch_row($result);
 
     if ($row[0] >= 2){
-        echo "Attempts already greater than 2. <br> You cannot submit another attempt.";
+        echo "<p>Attempts already greater than 2. <br> You cannot submit another attempt.</p>";
     }
     else{
         if (!$row){

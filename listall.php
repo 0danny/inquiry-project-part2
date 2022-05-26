@@ -11,17 +11,19 @@
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/responsive.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/quiz.css">
+    <link rel="stylesheet" href="styles/sidepage.css">
 </head>
 <body>
 <?php
 
 require_once "settings.php";
-$conn = @mysqli_connect($host,
-$user,
-$pwd,
-$sql_db
+    $conn = @mysqli_connect($host,
+    $user,
+    $pwd,
+    $sql_db
 );
+
+
 
 if (!$conn) {
     // Displays an error message
@@ -42,7 +44,7 @@ if (!$conn) {
     echo "<p>Something is wrong with ", $query, "</p>";
     } else {
         if (mysqli_num_rows( $result ) !=0){
-            echo "Listing all attempts:";
+            echo "<p>Listing all attempts:</p>";
             // Display the retrieved records
             echo "<table border=\"1\">\n";
             echo "<tr>\n "

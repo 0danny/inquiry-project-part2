@@ -11,7 +11,7 @@
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/responsive.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/quiz.css">
+    <link rel="stylesheet" href="styles/sidepage.css">
 </head>
 <body>
 <?php

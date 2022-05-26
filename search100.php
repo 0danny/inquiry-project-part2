@@ -11,7 +11,7 @@
     <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/responsive.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/quiz.css">
+    <link rel="stylesheet" href="styles/sidepage.css">
 </head>
 <body>
 <?php
@@ -30,7 +30,7 @@ if (!$conn) {
 }
 else{
     // Upon successful connection
-    echo "Listing all students with 100% score on attempt 1:";
+    echo "<p>Listing all students with 100% score on attempt 1:</p>";
 
         $query = "SELECT student_number, first_name, last_name FROM attempts WHERE score='100' AND number_of_attempts='1'";
         $result = mysqli_query($conn, $query);
@@ -65,7 +65,7 @@ else{
                     }
 
             else{
-                echo("There are no attempts currently for students with less than 50% score on attempt 2. Please complete the quiz first.");
+                echo("<p>There are no attempts currently for students with less than 50% score on attempt 2. Please complete the quiz first.</p>");
                 echo "<form method='post' action='manage.php'>";
                 echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
                 echo "</form>";
