@@ -37,7 +37,7 @@
         <p>
         This enhancement takes an array as a parameter and measures the length of it. This helped to ensure that the correct amount of checkboxes was ticked. <!-- ENTER DESCRIPTION HERE --> <a href="markquiz.php">Markquiz</a>
             <br><br>
-            <img src="images/countphp.png" style="width:600px;height: auto;" alt="Count $check_array variable">
+            <img src="images/countphp.png" style="width:1000px;height: auto;" alt="Count $check_array variable">
 
             <br> Website used as reference: <a href="https://www.w3schools.com/php/func_array_count.asp">Click Here</a> <!-- ENTER WEBSITE SAM G USED -->
         </p>
@@ -53,8 +53,8 @@
         In the html element of the quiz page, the names of the checkboxes need to be followed by array brackets, [], to ensure that all of the checkbox data is collected. <br/>
         Without these brackets, the checkbox $_POST method will just return the last checkbox value selected. (lines 114, 120, 125, 130 under ‘name=’)  <!-- ENTER DESCRIPTION HERE --> <a href="quiz.php">Quiz</a>
             <br><br>
-            <img src="images/htmlarray.png" style="width:600px;height: atuo;" alt="HTML array for checkbox">
-            <br><br>
+            <img src="images/htmlarray.png" style="width:1000px;height: auto;" alt="HTML array for checkbox">
+
             <br> Website used as reference: <a href="https://stackoverflow.com/questions/4997252/get-post-from-multiple-checkboxes">Click Here</a> <!-- ENTER WEBSITE SAM G USED -->
         </p>
     </section>
