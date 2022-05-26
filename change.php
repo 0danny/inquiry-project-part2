@@ -29,6 +29,49 @@ if ($conn) {
         $number_of_attempts=trim($_POST["number_of_attempts"]);
         $query = "SELECT * FROM attempts WHERE student_number='$student_number' AND number_of_attempts='$number_of_attempts'";
         $result = mysqli_query($conn, $query);
+        if (($student_number > 9999999) && ($student_number <1000000000)){
+            echo "<p>The student number has to be either 7 or 10 characters</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif ($student_number == ""){
+            echo "<p>You have not entered a student number</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif ($number_of_attempts == ""){
+            echo "<p>You have not entered the number of attempts</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif (($student_number == "") &&  ($number_of_attempts == "")){
+            echo "<p>You have not entered both student number and number of attempts</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif (($student_number == "") &&  ($score == "")){
+            echo "<p>You have not entered both student number and score</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif (($number_of_attempts == "") &&  ($score == "")){
+            echo "<p>You have not entered both number of attempts and score</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif ((($student_number == "") &&  ($number_of_attempts == "") && ($score == ""))){
+            echo "<p>You have not entered student number, number of attempts and score</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        else{
         if (!$result) {
             echo "<p>Something is wrong with ", $query, "</p>";
             echo mysqli_error($conn);
@@ -84,7 +127,7 @@ if ($conn) {
             }
             }
             }
-    mysqli_close($conn);}
+    mysqli_close($conn);}}
 else {
     echo "<p>Connection failed!</p>";
     echo mysqli_connect_error();

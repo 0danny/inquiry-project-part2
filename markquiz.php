@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="description" content="Server Side Data Validation" />
   <meta name="keywords" content="HTML, PHP" />
-  <meta name="author" content="Adam Horvath"  />
-  
+  <meta name="author" content="Adam Horvath, Sam Green"  />
+
   <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/responsive.css" rel="stylesheet" />

@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8"/>
-    <meta name="description" content="Creating Web Applications Lab 10" />
+    <meta name="description" content="Management page for quiz entries." />
     <meta name="keywords" content="PHP, Mysql" />
+    <meta name="author" content="Daniel Paolone" />
     <title>Quiz supervisor queries</title>
 
     <link rel="icon" href="images/node_logo.webp">
@@ -20,7 +21,7 @@
     include_once ("header.inc");
     require_once ("settings.php"); //connection info
 
-    $password = "helloworld";
+    $password = "Node.JS";
 
     $conn = @mysqli_connect(
         $host,
@@ -56,7 +57,7 @@
     <form method="post" action="manage.php" class="management_form">
         <p>
             <label for="management_pass">Enter the management password: </label> 
-            <input type="password" name="management_pass" placeholder="Password..." max="40" size="40"/>
+            <input type="password" name="management_pass" placeholder="Password... (Hint: Node.JS)" max="40" size="40"/>
         </p>
         <br>
 

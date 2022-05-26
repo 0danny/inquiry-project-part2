@@ -27,7 +27,13 @@ $sql_db
 if ($conn) {
     if (isset($_POST["student_number"])){
         $student_number=$_POST["student_number"];
-        if ($student_number == ""){
+        if (($student_number > 9999999) && ($student_number <1000000000)){
+            echo "<p>The student number has to be either 7 or 10 characters</p>";
+            echo "<form method='post' action='manage.php'>";
+            echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
+            echo "</form>";
+        }
+        elseif ($student_number == ""){
             echo "<p>You have not entered a student number</p>";
             echo "<form method='post' action='manage.php'>";
             echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";

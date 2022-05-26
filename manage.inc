@@ -13,7 +13,7 @@
             <form method="post" action="search.php" class="manage_form">
             <p>
                 <label for="student_number">Enter student number:</label> 
-                <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
+                <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
             </p>
             <br>
 
@@ -55,10 +55,10 @@
 
         <fieldset>
             <legend>Delete attempt by ID</legend>
-            <form method="post" action="delete.php" action="delete2.php" class="manage_form">
+            <form method="post" action="delete.php" class="manage_form"> <!-- Links to delete.php -->
                 <p>
                     <label for="first_name">Enter student number:</label>
-                    <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
+                    <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
                 </p>
                 <br>
                 <input type="submit" value="Delete"/>
@@ -67,10 +67,10 @@
 
         <fieldset>
             <legend>Update student score</legend>
-            <form method="post" action="change.php" action="update.php" class="manage_form">
+            <form method="post" action="change.php" class="manage_form"> <!-- Links to change.php -->
                 <p>
                     <label for="first_name">Enter student number:</label>
-                    <input type="text" name="student_number" pattern=".{7,10}" placeholder="Type student id..."/>
+                    <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
                 </p>
                 <p>
                     <label for="number_of_attempts">Select attempt number:</label>
