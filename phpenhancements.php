@@ -71,6 +71,8 @@
         <a href="loginform.php">Login</a>
             <br><br>
             <img src="images/loginscreen.png" style="width:1000px;height: auto;" alt="The username and password login interface for the management page.">
+
+            <br> Website used as reference: <a href="https://www.simplilearn.com/tutorials/php-tutorial/php-login-form">Click Here</a>
         </p>
     </section>
 
@@ -88,6 +90,7 @@
         <a href="registerform.php">Register</a>
             <br><br>
             <img src="images/registerscreen.png" style="width:1000px;height: auto;" alt="The username and password registration interface for the management page.">
+            <br> Website used as reference: <a href="https://www.simplilearn.com/tutorials/php-tutorial/php-login-form">Click Here</a>
         </p>
     </section>
 
@@ -104,6 +107,7 @@
         <a href="updatepasswordform.php">Reset Password</a>
             <br><br>
             <img src="images/passwordresetscreen.png" style="width:1000px;height: auto;" alt="The password reset interface for the management page.">
+            <br> Website used as reference: <a href="https://www.simplilearn.com/tutorials/php-tutorial/php-login-form">Click Here</a>
         </p>
     </section>
 
