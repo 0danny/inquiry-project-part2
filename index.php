@@ -52,7 +52,7 @@
             <a href="quiz.php">Quiz Page</a>
             <br>
             <br>
-            <a href="manage.php">Manage Quiz Queries Page</a>
+            <a href="loginform.php">Manage Quiz Queries Page</a>
             <br>
         </section>
         <section id="table">

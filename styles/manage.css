@@ -1,9 +1,9 @@
 /* 
 /* 
     filename: [manage.css] 
-    author: [Sam Green] 
+    author: [Sam Green & Adam Horvath] 
     created: [25/5/2022] 
-    last modified: [25/5/2022] 
+    last modified: [27/5/2022] 
     description: [This CSS document styles a php file called manage.php] 
 */
 
@@ -75,4 +75,20 @@ p {
 
 input:hover {
     background-color: #456285;
+}
+
+p.redirect {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
 }

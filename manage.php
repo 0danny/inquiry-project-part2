@@ -1,75 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<head> 
     <meta charset="utf-8"/>
-    <meta name="description" content="Management page for quiz entries." />
-    <meta name="keywords" content="PHP, Mysql" />
-    <meta name="author" content="Daniel Paolone" />
-    <title>Quiz supervisor queries</title>
-
-    <link rel="icon" href="images/node_logo.webp">
     <title>Node JS Manage Page</title>
+    <meta name="description" content="Posting quiz entries." />
+    <meta name="keywords" content="HTML, PHP" />
+    <meta name="author" content="Adam Horvath, Sam Green" />
+    <meta name="date" content="Last Modified: 27/5/22"/>
+    <!-- other meta here -->
+    <link rel="icon" href="images/node_logo.webp">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/manage.css">
-</head>
-
-<body>
+<head>
 
 <?php
-    include_once ("header.inc");
-    require_once ("settings.php"); //connection info
-
-    $password = "Node.JS";
-
-    $conn = @mysqli_connect(
-        $host,
-        $user,
-        $pwd,
-        $sql_db
-    );
-    // Checks if connection is successful
-    
-    if(isset($_POST["management_pass"]))
-    {
-        if($_POST["management_pass"] == $password)
-        {
-            echo '<style>.management_fieldset { display: none; }</style>';
-            include_once ("manage.inc");
-        }
-        else
-        {
-            echo "<p style=\"padding: 10px; color: red;\">The password you have entered is incorrect.</p>";
-        }
-    }
-    
-    // close the database connection
-    mysqli_close($conn);
-    // if successful database connection
-
+require_once("header.inc");
 ?>
+  
+  <div class="manage-container">
+        <h3 class="subheader">Manage Page</h3>
 
+        <form method="post" action="listall.php" class="manage_form">
+            <p>
+                <input type="submit" name="all_attempts" class="manage_form_allattempts" value="List All Attempts">
+            </p>
+        </form>
 
-<fieldset class="management_fieldset">
-    <legend>Password Form</legend>
+        <fieldset>
+            <legend>Search student by number</legend>
             
-    <form method="post" action="manage.php" class="management_form">
-        <p>
-            <label for="management_pass">Enter the management password: </label> 
-            <input type="password" name="management_pass" placeholder="Password... (Hint: Node.JS)" max="40" size="40"/>
-        </p>
-        <br>
+            <form method="post" action="search.php" class="manage_form">
+            <p>
+                <label for="student_number">Enter student number:</label> 
+                <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
+            </p>
+            <br>
 
-        <input type="submit" value="Login"/>
-    </form>
+            <input type="submit" value="Search Student Number Attempt"/>
+            </form>
 
-</fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>Search student by name</legend>
+            <form method="post" action="search.php" class="manage_form">
+                <p>
+                    <label for="first_name">Enter first name:</label>
+                    <input type="text" name="first_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type first name..."/>
+                </p>
+                <p>
+                    <label for="last_name">Enter last name:</label>
+                    <input type="text" name="last_name" maxlength="30" pattern="[a-zA-Z]+" placeholder="Type last name..."/>
+                </p>
+                <br>
+                <input type="submit" value="Search Student Name Attempt"/>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Search student by percentage %</legend>
+            <form method="post" action="search100.php" class="manage_form">
+                <p>
+                    <input type="submit" value="List Students Who Got 100% On Attempt 1" name='100'/>
+                </p>
+            </form>
+
+            <form method="post" action="search50.php" class="manage_form">
+                <p>
+                    <input type="submit" value="List Students Who Got Less Than 50% On Attempt 2"/>
+                </p>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delete attempt by ID</legend>
+            <form method="post" action="delete.php" class="manage_form"> <!-- Links to delete.php -->
+                <p>
+                    <label for="first_name">Enter student number:</label>
+                    <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
+                </p>
+                <br>
+                <input type="submit" value="Delete"/>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Update student score</legend>
+            <form method="post" action="change.php" class="manage_form"> <!-- Links to change.php -->
+                <p>
+                    <label for="first_name">Enter student number:</label>
+                    <input type="text" name="student_number" minlength="7" maxlength="10" pattern=".{7,10}" placeholder="Type student id..."/>
+                </p>
+                <p>
+                    <label for="number_of_attempts">Select attempt number:</label>
+                    <input type="number" name="number_of_attempts" min="1" max="2"/>
+                </p>
+                <br>
+                <input type="submit" value="Change Score Of Attempt"/>
+            </form>
+        </fieldset>
+    </div>
 
 <?php
-    include_once "main_footer.inc";
+require_once("main_footer.inc");
 ?>
-
-</body>
-
-</html>

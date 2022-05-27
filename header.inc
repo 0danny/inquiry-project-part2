@@ -13,7 +13,7 @@
             <a href="enhancements.php">Enchancements</a>
             <a href="phpenhancements.php">PHP Enchancements</a>
             <a href="quiz.php">Quiz</a>
-            <a href="manage.php">Manage Quiz Queries</a>
+            <a href="loginform.php">Manage Quiz Queries</a>
         </nav>
 
         <div class="link_wrapper">
