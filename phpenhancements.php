@@ -59,6 +59,11 @@
         </p>
     </section>
 
+    <br><br>
+    <h3 class="title">
+    Password locked management page  <!-- RENAME THIS -->
+    </h3>
+
     <section class="paragraph">
         <p>
         The use of a password locked management page takes our project above and beyond the basic scope. The use of a password allows us to enter in and manage information for the backend portion of the website <br> 
