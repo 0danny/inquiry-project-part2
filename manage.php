@@ -46,9 +46,24 @@
                 $result = mysqli_query($conn, $query);
         }
         
-
+    }
         $username = trim($_POST["username"]);
         $password = trim($_POST["password"]);
+
+
+
+        if(isset($_POST["management_user"]))
+        {
+            if($_POST["management_user"] == $username)
+            {
+                echo '<style>.management_fieldset { display: none; }</style>';
+                include_once ("manage.inc");
+            }
+            else
+            {
+                echo "<p style=\"padding: 10px; color: red;\">Please try something else</p>";
+            }
+        }
 
 
     if(isset($_POST["management_pass"]))
@@ -75,6 +90,10 @@
     <legend>Password Form</legend>
             
     <form method="post" action="manage.php" class="management_form">
+        <p>
+            <label for="management_user">Enter your username: </label> 
+            <input type="username" name="management_user" placeholder="Username" max="40" size="40"/>
+        <p>
         <p>
             <label for="management_pass">Enter the management password: </label> 
             <input type="password" name="management_pass" placeholder="Password... (Hint: Node.JS)" max="40" size="40"/>
