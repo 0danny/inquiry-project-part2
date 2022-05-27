@@ -101,6 +101,12 @@
         <br>
 
         <input type="submit" value="Login"/>
+
+        </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
     </form>
 
 </fieldset>
