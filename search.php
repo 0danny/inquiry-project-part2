@@ -29,8 +29,8 @@ if ($conn) {
         $last_name=trim($_POST["last_name"]);
         $query = "SELECT * FROM attempts WHERE first_name='$first_name' AND last_name='$last_name'";
         $result = mysqli_query($conn, $query);
-        if ($first_name == ""){
-            echo "<p>You have not entered first name</p>";
+        if (($first_name == "") &&  ($last_name == "")){
+            echo "<p>You have not entered both first and last names</p>";
             echo "<form method='post' action='manage.php'>";
             echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
             echo "</form>";
@@ -41,8 +41,8 @@ if ($conn) {
             echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
             echo "</form>";
         }
-        elseif (($first_name == "") &&  ($last_name == "")){
-            echo "<p>You have not entered both first and last names</p>";
+        elseif ($first_name == ""){
+            echo "<p>You have not entered first name</p>";
             echo "<form method='post' action='manage.php'>";
             echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
             echo "</form>";
