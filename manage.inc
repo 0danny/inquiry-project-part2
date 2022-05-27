@@ -1,3 +1,11 @@
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Posting quiz entries." />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="Adam Horvath, Sam Green" />
+    <meta name="date" content="Last Modified: 27/5/22"/>
+<head>
+  
   <div class="manage-container">
         <h3 class="subheader">Manage Page</h3>
 
