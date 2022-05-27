@@ -8,7 +8,7 @@
                 </p>
         </form>
     <h3 class="subheader"></h3>
-        <form method="post" action="manage.php" >
+        <form method="post" action="loginform.php" >
                 <p>
                     <input type="submit" value="Continue to Manage Quiz Queries">
                 </p>
