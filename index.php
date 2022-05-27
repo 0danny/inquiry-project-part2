@@ -46,13 +46,13 @@
             <a href="enhancements.php">Enchancements Page</a>
             <br>
             <br>
-            <a href="enhancements.php">PHP Enchancements Page</a>
+            <a href="phpenhancements.php">PHP Enchancements Page</a>
             <br>
             <br>
             <a href="quiz.php">Quiz Page</a>
             <br>
             <br>
-            <a href="quiz.php">Manage Quiz Queries Page</a>
+            <a href="manage.php">Manage Quiz Queries Page</a>
             <br>
         </section>
         <section id="table">
