@@ -43,10 +43,17 @@
             <a href="topic.php">Topic Page</a>
             <br>
             <br>
+            <a href="enhancements.php">Enchancements Page</a>
+            <br>
+            <br>
+            <a href="enhancements.php">PHP Enchancements Page</a>
+            <br>
+            <br>
             <a href="quiz.php">Quiz Page</a>
             <br>
             <br>
-            <a href="enhancements.php">Enchancements Page</a>
+            <a href="quiz.php">Manage Quiz Queries Page</a>
+            <br>
         </section>
         <section id="table">
             <h3 class="subheader">Where is Node.JS Used</h3>
