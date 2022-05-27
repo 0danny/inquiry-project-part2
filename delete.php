@@ -78,11 +78,11 @@ if ($conn) {
                     echo "</table>\n ";
                     // Frees up the memory, after using the result pointer
                     mysqli_free_result($result);
-                    echo "<h2>Would you like to delete all of these attempts?</h2>";
+                    echo "<p>Would you like to delete all of these attempts?<p>";
                     echo "<form method='post' action='delete2.php' class='manage_form'>";
                     echo "<input type='hidden' name='student_number' value='$student_number'>";
                     echo "<p>Yes<input type='radio' value='yes' name='answer'></p>";
-                    echo "<p>No<input type='radio' value='no' name='answer'></p>>";
+                    echo "<p>No<input type='radio' value='no' name='answer'></p>";
                     echo "<p><input type='submit'></p>";
                     echo "</form>";}
                 
