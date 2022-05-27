@@ -66,8 +66,8 @@
 
     <section class="paragraph">
         <p>
-        The use of a login page takes the project above the expected scope and ensures that people without login credentials cannot edit the attempts database. Since the usernames are set to unique within the MySQL database, visitors with <br>
-        malicious intent cannot make changes to the attempts database while posing as someone else.
+        The use of a login page takes the project above the expected scope and ensures that people without login credentials cannot edit the attempts database. Since the <br/> 
+        usernames are set to unique within the MySQL database, visitors with malicious intent cannot make changes to the attempts database while posing as someone else.
         <a href="loginform.php">Login</a>
             <br><br>
             <img src="images/loginscreen.png" style="width:1000px;height: auto;" alt="The username and password login interface for the management page.">
@@ -81,9 +81,10 @@
 
     <section class="paragraph">
         <p>
-        The use of a username and password locked management page takes our project above and beyond the basic scope. The use of a username and password allows us to enter in and manage information for the backend portion of the website <br> 
-        in a useable interface while keeping malicious and common users out. The username and password is sent in to the php which adds the information to a preexisting table, or creates one if it does not exist. This is done on the <br>
-        server so therefore the table storing the login credentials is not visible in any way to the normal users of the website.
+        The use of a username and password locked management page takes our project above and beyond the basic scope. The use of a username and password allows us to enter <br/>
+        in and manage information for the backend portion of the website in a useable interface while keeping malicious and common users out. The username and password is <br/>
+        sent in to the php which adds the information to a preexisting table, or creates one if it does not exist. This is done on the server so therefore the table storing <br/>
+        the login credentials is not visible in any way to the normal users of the website.
         <a href="registerform.php">Register</a>
             <br><br>
             <img src="images/registerscreen.png" style="width:1000px;height: auto;" alt="The username and password registration interface for the management page.">
@@ -97,8 +98,9 @@
 
     <section class="paragraph">
         <p>
-        The password reset page ensures access to individuals who have forgotten their password. As an existing username is needed when making the password reset, and since the MySQL database where both username and password are <br>
-        stored for individuals users cannot be viewed unless logged in with the correct credentials, which therefore insures that normal users of the website cannot change the password for someone else.
+        The password reset page ensures access to individuals who have forgotten their password. As an existing username is needed when making the password reset, and since <br/>
+        the MySQL database where both username and password are stored for individuals users cannot be viewed unless logged in with the correct credentials, which therefore <br/>
+        insures that normal users of the website cannot change the password for someone else.
         <a href="updatepasswordform.php">Reset Password</a>
             <br><br>
             <img src="images/passwordresetscreen.png" style="width:1000px;height: auto;" alt="The password reset interface for the management page.">
