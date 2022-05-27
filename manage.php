@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="description" content="Management page for quiz entries." />
     <meta name="keywords" content="PHP, Mysql" />
-    <meta name="author" content="Daniel Paolone" />
+    <meta name="author" content="Daniel Paolone, Alister Klarica" />
     <title>Quiz supervisor queries</title>
 
     <link rel="icon" href="images/node_logo.webp">
@@ -30,7 +30,27 @@
         $sql_db
     );
     // Checks if connection is successful
+
+    if ($conn) {
+        $query = "SELECT * FROM users";
+        $result = mysqli_query($conn, $query);
     
+        if(!$result){
+            $query = "CREATE TABLE `users` (
+    
+                `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                `username` VARCHAR(50) NOT NULL UNIQUE,
+                `password` VARCHAR(255) NOT NULL,
+                ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1";
+    
+                $result = mysqli_query($conn, $query);
+        }
+        
+
+        $username = trim($_POST["username"]);
+        $password = trim($_POST["password"]);
+
+
     if(isset($_POST["management_pass"]))
     {
         if($_POST["management_pass"] == $password)
