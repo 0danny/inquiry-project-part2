@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="description" content="Creating Web Applications Lab 10" />
-<title>Student Search</title>
-    <meta name="description" content="Search function PHP">
-    <meta name="keywords" content="PHP, HTML, MYSQL, Manage page">
-    <meta name="author" content="Adam Horvath, Sam Green"/>
-    <meta name="date" content="Last Modified: 26/5/22"/>
-<meta name="keywords" content="PHP, Mysql" />
-<title>Creating connection to MySQL database</title>
+<title>Quiz Results</title>
+<meta name="description" content="Quiz Results" />
+<meta name="description" content="Search function PHP">
+<meta name="keywords" content="PHP, HTML, MYSQL, Manage page">
+<meta name="author" content="Adam Horvath, Sam Green"/>
+<meta name="date" content="Last Modified: 26/5/22"/>
+<!-- other meta here -->
 <link rel="stylesheet" href="styles/sidepage.css">
+<link rel="stylesheet" href="styles/quiz.css">
 </head>
 <body>
 <?php

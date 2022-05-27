@@ -27,16 +27,16 @@
             
     <form method="post" action="updatepassword.php" class="management_form">
         <p>
-            <label for="management_pass">Enter your username: </label> 
-            <input type="text" name="management_username" max="40" size="40"/>
+            <label for="management_pass">Enter username: </label> 
+            <input type="text" name="management_username" placeholder="Username..." max="40" size="40"/>
         </p>
         <p>
             <label for="management_pass">Enter new password: </label> 
-            <input type="text" name="management_pass" max="40" size="40"/>
+            <input type="text" name="management_pass" placeholder="Password..." max="40" size="40"/>
         </p>
         <br>
 
-        <input type="submit" value="Login"/>
+        <input type="submit" value="Reset"/>
     </form>
 
 </fieldset>

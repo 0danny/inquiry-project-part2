@@ -35,7 +35,7 @@
             <!-- Student ID text input -->
             <p>
                 <label for="student_number">Student Number</label>
-                <input type="text" name="student_number" id="student_number" required="required" pattern=".{7,10}" placeholder="Your student id..." />
+                <input type="text" name="student_number" id="student_number" required="required" pattern=".{7,10}" maxlength="10" placeholder="Your student id..." />
                 <!-- Input patterns and restrictions used to validate user input. -->
             </p>
 

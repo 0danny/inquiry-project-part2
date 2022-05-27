@@ -27,16 +27,16 @@
             
     <form method="post" action="register.php" class="management_form">
         <p>
-            <label for="management_pass">Enter the username: </label> 
+            <label for="management_pass">Enter username: </label> 
             <input type="text" name="management_username" placeholder="Username..." max="40" size="40"/>
         </p>
         <p>
-            <label for="management_pass">Enter the password: </label> 
+            <label for="management_pass">Enter password: </label> 
             <input type="text" name="management_pass" placeholder="Password..." max="40" size="40"/>
         </p>
         <br>
 
-        <input type="submit" value="Login"/>
+        <input type="submit" value="Register"/>
     </form>
 
 <!-- redirects the user to the login page -->   
