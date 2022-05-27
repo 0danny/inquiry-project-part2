@@ -65,7 +65,7 @@ else{
                     }
 
             else{
-                echo("<p>There are no attempts currently for students with less than 50% score on attempt 2. Please complete the quiz first.</p>");
+                echo("<p>There are no attempts currently for students with 100% score on attempt 1. Please complete the quiz first.</p>");
                 echo "<form method='post' action='manage.php'>";
                 echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
                 echo "</form>";
