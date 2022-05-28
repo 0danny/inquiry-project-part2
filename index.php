@@ -94,7 +94,10 @@
             <h3>HELP</h3>
             <a href=https://youtu.be/ExXhJDPmjts>
                 <p>Video Explaination of Webpage</p>
-            </a>
+                </a>
+            <a href=https://www.youtube.com/watch?v=jLrwV2Mz-Q8>
+                <p>Part 2 Video about PHP</p>
+                </a>
             <br>
             <p>N.B. References can be found <a href=topic.html#footnotes>here</a></p>
         </section>
