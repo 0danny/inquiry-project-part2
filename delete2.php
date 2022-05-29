@@ -30,7 +30,7 @@ else {
     if (isset($_POST['answer'])){
         $answer = ($_POST['answer']);
         if($answer == 'no'){
-            echo "Attempts kept.";
+            echo "<p>Attempts kept.</p>";
             echo "<form method='post' action='manage.php'>";
             echo "<p><input type='submit' value='Return to Manage Quiz Queries'></p>";
             echo "</form>";

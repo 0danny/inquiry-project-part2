@@ -92,11 +92,11 @@
 
         <section id="youtube_link">
             <h3>HELP</h3>
-            <a href=https://youtu.be/ExXhJDPmjts>
-                <p>Part 1 Video Explaination of Webpage</p>
+            <a href="https://youtu.be/ExXhJDPmjts">
+                <p>Part 1 Video Explaination of Webpage (Assignment Part 1)</p>
                 </a>
-            <a href=https://www.youtube.com/watch?v=xAY0aZy2iy4>
-                <p>Part 2 Video about PHP</p>
+            <a href="https://youtu.be/jLrwV2Mz-Q8">
+                <p>Part 2 Video about PHP (Assignment Part 2)</p>
                 </a>
             <br>
             <p>N.B. References can be found <a href=topic.html#footnotes>here</a></p>
